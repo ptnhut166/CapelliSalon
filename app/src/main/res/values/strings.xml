@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Capelli Salon</string>
+    <string name="action_home">Home</string>
+    <string name="action_notification">Notifications</string>
+    <string name="action_his">Purchase History</string>
+    <string name="action_cart">Shopping Cart</string>
+    <string name="action_account">Account Setting</string>
+</resources>
