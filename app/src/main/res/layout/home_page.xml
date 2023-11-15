@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".HomeActivity"
     android:orientation="vertical">
 
     <ImageView
@@ -56,6 +56,7 @@
                     android:src="@drawable/home_img2" />
 
                 <Button
+                    android:id="@+id/home_btn_booking"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -80,6 +81,7 @@
                     android:src="@drawable/home_img2" />
 
                 <Button
+                    android:id="@+id/home_btn_shopping"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -101,6 +103,7 @@
                     android:src="@drawable/home_img2" />
 
                 <Button
+                    android:id="@+id/home_btn_lookbook"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"

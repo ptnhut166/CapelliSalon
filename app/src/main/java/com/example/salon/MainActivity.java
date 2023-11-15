@@ -8,6 +8,6 @@ public class MainActivity extends AppCompatActivity
 {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.account_page);
+        setContentView(R.layout.home_page);
     }
 }
