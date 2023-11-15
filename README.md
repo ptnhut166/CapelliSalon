@@ -2,7 +2,7 @@
 ## ANDROID APP FOR MANAGING SALON - CAPELLI SALON
 
 ## Members:
-| Number | Name                        | ID     | Missions | Đánh giá |
+| Number | Name                        | ID     | Missions | Rate |
 | --- |----------------------------|----------|------------|----------|
 | 1 | [Phạm Thanh Nhựt](https://www.facebook.com/pham.thanh.nhut.1606) | 20521728 | Leader, Design UI | 0% |
 | 2 | [Trương Mỹ Song Dân](https://www.facebook.com/truongmysongdan)    | 20520424 | Design UI | 0% |
