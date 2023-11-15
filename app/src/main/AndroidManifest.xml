@@ -36,6 +36,10 @@
             android:name=".LookbookActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".LookbookLong"
+            android:exported="false">
+        </activity>
 
     </application>
 
