@@ -99,20 +99,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@android:drawable/btn_star" />
+            android:backgroundTint="#4CAF50"
+            android:src="@drawable/shopping_chat_icon_img1" />
 
         <ImageButton
             android:id="@+id/imageButton9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@android:drawable/btn_star" />
+            android:backgroundTint="#4CAF50"
+            android:src="@drawable/shopping_icon_img2" />
 
-        <ImageButton
-            android:id="@+id/imageButton7"
+        <Button
+            android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@android:drawable/btn_star" />
+            android:backgroundTint="#FF5722"
+            android:text="BUY" />
+
     </LinearLayout>
 </LinearLayout>

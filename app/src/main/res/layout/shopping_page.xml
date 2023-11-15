@@ -24,29 +24,31 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="text"
-            android:text="Name" />
+            android:inputType="text" />
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@android:drawable/btn_star" />
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/shopping_search_icon_img3" />
 
         <ImageButton
             android:id="@+id/imageButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@android:drawable/btn_star" />
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/shopping_icon_img2" />
 
         <ImageButton
             android:id="@+id/imageButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@android:drawable/btn_star" />
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/shopping_chat_icon_img1" />
     </LinearLayout>
 
     <ScrollView
