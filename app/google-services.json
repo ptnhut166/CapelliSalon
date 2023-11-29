@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "19947052505",
+    "project_id": "capelli-salon-10245",
+    "storage_bucket": "capelli-salon-10245.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19947052505:android:46a67b5fc3f8442a244dc8",
+        "android_client_info": {
+          "package_name": "com.example.salon"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1ZdPdUfpiqLL0DKEJYnTZjZV5z4Kk2mM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,20 +8,25 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity{
+    Button btn_login, btn_forgot, btn_signup;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
-        Button btn_login = findViewById(R.id.button);
 
-        View.OnClickListener listenerLogin = new View.OnClickListener() {
+        btn_login=findViewById(R.id.btn_login);
+        btn_forgot=findViewById(R.id.btn_forgot);
+        btn_signup=findViewById(R.id.btn_signup);
+
+        
+
+        btn_signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setClass(view.getContext(), HomeActivity.class);
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
+                finish();
             }
-        };
-        //Gán Listener cho editbutton
-        btn_login.setOnClickListener(listenerLogin);
+        });
     }
 }

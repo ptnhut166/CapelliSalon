@@ -15,6 +15,7 @@ public class LookbookLong extends AppCompatActivity {
     int position =0;
     int[] imgLong = {R.drawable.lookbook_img1,R.drawable.lookbook_img2,R.drawable.lookbook_img3};
     Button prevLong, nextLong;
+
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +48,7 @@ public class LookbookLong extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                if (position>0)
+                if (position>=0)
                 {
                     position--;
                     imageSwitcherLong.setImageResource(imgLong[position]);
