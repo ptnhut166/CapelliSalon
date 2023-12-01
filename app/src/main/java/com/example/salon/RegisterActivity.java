@@ -18,6 +18,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.Firebase;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,6 +32,10 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressBar progressBar;
     protected void onCreate(Bundle savedInstanceState)
     {
+        FirebaseApp.initializeApp(/*context=*/ this);
+        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
+        firebaseAppCheck.installAppCheckProviderFactory(
+                DebugAppCheckProviderFactory.getInstance());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
 
@@ -37,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.change_login);
 
         editTextEmail= findViewById(R.id.edt_email);
-        editTextPassword =findViewById(R.id.edt_email);
+        editTextPassword =findViewById(R.id.edt_password);
         editTextConfirm = findViewById(R.id.edt_confirm);
 
         btnSignUp=findViewById(R.id.btn_register);
