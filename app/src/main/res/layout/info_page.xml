@@ -109,9 +109,22 @@
     </TableLayout>
 
     <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Update information"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF">
+    </Button>
+    <Button
         android:id="@+id/btn_logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Log out"></Button>
+        android:text="Log out"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF">
+    </Button>
 </LinearLayout>
