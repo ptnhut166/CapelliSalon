@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity{
     TextInputEditText edt_email, edt_password;
-    Button btn_login, btn_signup;
+    Button btn_login, btn_signup,btn_forgot;
     FirebaseAuth mAuth;
 
 
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity{
         edt_password = findViewById(R.id.edt_login_password);
         btn_login = findViewById(R.id.btn_login);
         btn_signup=findViewById(R.id.btn_signup);
-
+        btn_forgot=findViewById(R.id.btn_forgot);
 
 
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +87,7 @@ public class LoginActivity extends AppCompatActivity{
                             if (task.isSuccessful()){
                                 Toast.makeText(LoginActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                finish();
                             }else{
                                 Toast.makeText(LoginActivity.this, "Log in Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
@@ -103,6 +104,13 @@ public class LoginActivity extends AppCompatActivity{
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        btn_forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, ForgotActivity.class);
+                startActivity(intent);
             }
         });
     }

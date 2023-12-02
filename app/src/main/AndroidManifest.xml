@@ -53,6 +53,10 @@
             android:name=".RegisterActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".ForgotActivity"
+            android:exported="false">
+        </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
