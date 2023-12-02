@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity
         Button btn_booking = findViewById(R.id.home_btn_booking);
         Button btn_shopping = findViewById(R.id.home_btn_shopping);
         Button btn_lookbook = findViewById(R.id.home_btn_lookbook);
-        Button btn_logout = findViewById(R.id.btn_logout);
+
         View.OnClickListener listenerBooking = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,20 +49,11 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         };
-        View.OnClickListener listenerLogout = new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent();
-                intent.setClass(view.getContext(), LoginActivity.class);
-                startActivity(intent);
-            }
-        };
         //Gán Listener cho editbutton
         btn_booking.setOnClickListener(listenerBooking);
         btn_lookbook.setOnClickListener(listenerLookbook);
-        btn_logout.setOnClickListener(listenerLogout);
+
 
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

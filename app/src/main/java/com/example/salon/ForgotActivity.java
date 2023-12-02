@@ -33,10 +33,9 @@ public class ForgotActivity extends AppCompatActivity {
     {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forgot_page);
+        setContentView(R.layout.info_page);
 
-        edt_email=findViewById(R.id.edt_forgot_email);
-        btn_forgot=findViewById(R.id.btn_reset);
+        Button btn_logout = findViewById(R.id.btn_logout);
 
         btn_forgot.setOnClickListener(new View.OnClickListener() {
             @Override
