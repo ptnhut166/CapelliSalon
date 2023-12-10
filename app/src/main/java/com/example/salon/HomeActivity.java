@@ -37,7 +37,7 @@ public class HomeActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(view.getContext(), BookingActivity.class);
+                intent.setClass(view.getContext(), Booking_sel_locale.class);
                 startActivity(intent);
             }
         };

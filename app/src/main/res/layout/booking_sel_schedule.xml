@@ -92,7 +92,8 @@
             android:layout_marginRight="385dp"
             android:src="@drawable/icon_vectorleft"/>
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/ibutton_schedule_next"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentStart="true"
@@ -103,7 +104,7 @@
             android:layout_marginLeft="376dp"
             android:layout_marginEnd="9dp"
             android:layout_marginRight="9dp"
-            android:src="@drawable/icon_vectorright"/>
+            android:src="@drawable/icon_vectorright" />
 
     </RelativeLayout>
     <ScrollView
@@ -120,7 +121,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/iv_capeli_locale1"
                     android:layout_width="81dp"
                     android:layout_height="81dp"
                     android:layout_alignParentStart="true"
