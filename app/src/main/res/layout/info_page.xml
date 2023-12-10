@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_capeli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="cursive"
+        android:text="Capelli"
+        android:textAllCaps="false"
+        android:textSize="80dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_salon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="SALON"
+        android:textSize="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="“We Believe Individuality is BeYOUtiful&quot;" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_info_name"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Enter your full name"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone number:" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="310dp"
+            android:layout_height="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_info_phone"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Enter your phone number"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address:" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="310dp"
+            android:layout_height="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_info_address"
+                android:layout_width="325dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter your address"
+                android:inputType="text" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Update information"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF">
+    </Button>
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Log out"
+        android:backgroundTint="#000000"
+        android:textColor="#FFFFFF">
+    </Button>
+</LinearLayout>

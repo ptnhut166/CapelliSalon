@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="364dp"
+            android:layout_marginRight="364dp"
+            android:src="@drawable/icon_vectorleft"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="118dp"
+            android:layout_marginRight="118dp"
+            android:text="CONFIRM"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:text="*Note before booking :"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:text="1. YOUR STYLIST HOLDS YOUR APPOINTMENT JUST FOR YOU, SO WE ASK THAT IF YOU MUST RESCHEDULE OR CANCEL YOUR APPOINTMENT PLEASE PROVIDE US 48-HOUR NOTICE." />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:text="2. AN UPFRONT PAYMENT IS REQUIRED TO BOOK ALL ONLINE APPOINTMENTS. IN THE EVENT YOU RESCHEDULE OR CANCEL YOUR APPOINTMENT WITH LESS THAN 48 HOURS OF YOUR SCHEDULED TIME OR YOU 'NO SHOW', YOUR ONLINE PAYMENT WILL BE FORFEITED."/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="338dp">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="197dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="81dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginBottom="58dp"
+            android:layout_toEndOf="@id/checkBox"
+            android:text="I acknowledge that I have read, understand, and agree to the policies."
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_book_now"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="112dp"
+            android:layout_marginLeft="112dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#000000"
+            android:text="BOOK NOW!" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/menu_bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
+    </RelativeLayout>
+
+</LinearLayout>
+
