@@ -33,12 +33,9 @@
 
         <activity
             android:name=".Booking_sel_locale"
+            android:exported="false">
 
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".Booking_sel_schedule"
             android:exported="false">
@@ -71,6 +68,14 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false">
+
+        </activity>
+        <activity android:name=".test"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
