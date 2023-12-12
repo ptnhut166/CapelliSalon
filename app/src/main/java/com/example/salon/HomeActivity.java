@@ -32,7 +32,32 @@ public class HomeActivity extends AppCompatActivity
         Button btn_booking = findViewById(R.id.home_btn_booking);
         Button btn_shopping = findViewById(R.id.home_btn_shopping);
         Button btn_lookbook = findViewById(R.id.home_btn_lookbook);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav); // Thay R.id.bottom_navigation bằng ID của BottomNavigationView trong layout của bạn
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
 
+                if (id == R.id.action_noti) {
+                    // Xử lý khi click vào Notifications
+                    NavigationManager.navigateToNotifications(HomeActivity.this);
+                    // Không gọi finish() ở đây nếu bạn không muốn kết thúc Activity hiện tại
+                } else if (id == R.id.action_home) {
+                    // Xử lý khi click vào Home
+                    NavigationManager.navigateToHome(HomeActivity.this);
+                } else if (id == R.id.action_cart) {
+                    // Xử lý khi click vào Cart
+                    NavigationManager.navigateToCart(HomeActivity.this);
+                } else if (id == R.id.action_his) {
+                    // Xử lý khi click vào History
+                    NavigationManager.navigateToHistory(HomeActivity.this);
+                } else if (id == R.id.action_acc) {
+                    // Xử lý khi click vào Settings
+                }
+
+                return true;
+            }
+        });
         View.OnClickListener listenerBooking = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,24 +74,23 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(intent);
             }
         };
+        View.OnClickListener listenerShopping = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(HomeActivity.this, Shopping.class); // Thay thế view.getContext() bằng HomeActivity.this
+                startActivity(intent);
+            }
+        };
 
         //Gán Listener cho editbutton
         btn_booking.setOnClickListener(listenerBooking);
         btn_lookbook.setOnClickListener(listenerLookbook);
+        btn_shopping.setOnClickListener(listenerShopping);
 
 
 
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-            Fragment fragment =null;
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                if(menuItem.getItemId() == R.id.action_home)
-                {
 
-                }
-                return true;
-            }
-        });
 
     }
 }

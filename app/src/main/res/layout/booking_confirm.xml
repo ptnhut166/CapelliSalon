@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="117dp">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/back_confirm"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
@@ -21,7 +22,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="364dp"
             android:layout_marginRight="364dp"
-            android:src="@drawable/icon_vectorleft"></ImageView>
+            android:src="@drawable/icon_back"></ImageButton>
 
         <TextView
             android:layout_width="wrap_content"

@@ -81,9 +81,11 @@
         android:layout_width="match_parent"
         android:layout_height="27dp">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/back_staff"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:contentDescription="Back Button"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
@@ -92,21 +94,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="385dp"
             android:layout_marginRight="385dp"
-            android:src="@drawable/icon_vectorleft"/>
+            android:src="@drawable/icon_back"/>
 
-        <ImageButton
-            android:id="@+id/ibutton_staff_next"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="376dp"
-            android:layout_marginLeft="376dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginRight="9dp"
-            android:src="@drawable/icon_vectorright" />
+
 
     </RelativeLayout>
     <ScrollView
@@ -119,6 +109,7 @@
             android:background="#4D000000"
             android:orientation="vertical">
             <RelativeLayout
+                android:id="@+id/staff_0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -165,6 +156,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/staff_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -211,6 +203,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/staff_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -258,6 +251,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/staff_3"
                 android:layout_width="match_parent"
                 android:layout_height="110dp">
 
@@ -312,6 +306,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_staff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/menu_bottom_nav">
