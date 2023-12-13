@@ -19,14 +19,16 @@ public class booking_confirm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.booking_confirm);
         back = findViewById(R.id.back_confirm);
+        Intent intent = getIntent();
+        BookingInfo bookingInfo = (BookingInfo) intent.getSerializableExtra("booking_info");
         final CheckBox checkBox = findViewById(R.id.checkBox);
         final Button btn_book_now = findViewById(R.id.btn_book_now);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Thực hiện hành động khi nhấn vào imageButton ở đây
-                Intent intent = new Intent(booking_confirm.this, booking_sel_staff.class);
-                startActivity(intent);
+                Intent intentback = new Intent(booking_confirm.this, booking_sel_staff.class);
+                startActivity(intentback);
                 finish(); // Đóng activity hiện tại nếu cần
             }
         });
@@ -38,7 +40,9 @@ public class booking_confirm extends AppCompatActivity {
         });
 
         btn_book_now.setOnClickListener(v -> {
-
+            Intent newintent = new Intent(booking_confirm.this, NotiActivity.class);
+            newintent.putExtra("booking_info", bookingInfo);
+            startActivity(newintent);
             Toast.makeText(booking_confirm.this, "Successful registration", Toast.LENGTH_SHORT).show();
             finish();
         });

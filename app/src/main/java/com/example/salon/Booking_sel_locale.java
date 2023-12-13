@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,21 +25,27 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Booking_sel_locale extends AppCompatActivity {
-    RelativeLayout location;
-    RelativeLayout location0;
-    RelativeLayout location1;
-    RelativeLayout location2;
-    RelativeLayout location3;
+    RelativeLayout location, location0, location1, location2, location3;
+    TextView name0, name1, name2, name3, address0, address1, address2, address3;
     FirebaseDatabase dataBase;
 
-    private void setLocationOnClickListener(final RelativeLayout location) {
+    private void setLocationOnClickListener(final RelativeLayout location, final TextView nameTextView, final TextView addressTextView) {
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Thực hiện hành động khi nhấn vào location ở đây
+                String name = nameTextView.getText().toString();
+                String address = addressTextView.getText().toString();
+                BookingInfo bookingInfo = new BookingInfo(name, address, "", "", "");
+                // Sử dụng thông tin name và address ở đây (ví dụ: hiển thị hoặc xử lý thông tin)
+                // Ví dụ:
+                Toast.makeText(getApplicationContext(), "Selected Name: " + name + ", Address: " + address, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Booking_sel_locale.this, Booking_sel_schedule.class);
+                intent.putExtra("booking_info", bookingInfo);
                 startActivity(intent);
                 finish(); // Đóng activity hiện tại nếu cần
+                DatabaseReference bookingRef = FirebaseDatabase.getInstance().getReference().child("bookings");
+                bookingRef.push().setValue(bookingInfo);
             }
         });
     }
@@ -74,16 +82,23 @@ public class Booking_sel_locale extends AppCompatActivity {
         });
 
         dataBase = FirebaseDatabase.getInstance();
-
+        name0 = findViewById(R.id.tv_locate_name_0);
+        name1 = findViewById(R.id.tv_locate_name_1);
+        name2 = findViewById(R.id.tv_locate_name_2);
+        name3 = findViewById(R.id.tv_locate_name_3);
+        address0 = findViewById(R.id.tv_locate_address_0);
+        address1 = findViewById(R.id.tv_locate_address_1);
+        address2 = findViewById(R.id.tv_locate_address_2);
+        address3 = findViewById(R.id.tv_locate_address_3);
         location0 = findViewById(R.id.location_0);
         location1 = findViewById(R.id.location_1);
         location2 = findViewById(R.id.location_2);
         location3 = findViewById(R.id.location_3);
 
-        setLocationOnClickListener(location0);
-        setLocationOnClickListener(location1);
-        setLocationOnClickListener(location2);
-        setLocationOnClickListener(location3);
+        setLocationOnClickListener(location0, name0, address0);
+        setLocationOnClickListener(location1, name1, address1);
+        setLocationOnClickListener(location2, name2, address2);
+        setLocationOnClickListener(location3, name3, address3);
 
         ImageButton imageButton = findViewById(R.id.ibutton_next);
         imageButton.setOnClickListener(new View.OnClickListener() {

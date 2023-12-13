@@ -126,6 +126,7 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_time_0"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -147,6 +148,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_time_1"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -182,6 +184,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_time_2"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -217,6 +220,7 @@
                 android:layout_height="110dp">
 
                 <TextView
+                    android:id="@+id/tv_time_3"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"

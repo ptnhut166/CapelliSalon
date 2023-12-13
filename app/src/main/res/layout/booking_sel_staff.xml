@@ -129,6 +129,7 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_staff_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -142,6 +143,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/tv_pnumber_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -161,6 +163,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_staff_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -174,6 +177,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/tv_pnumber_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -208,6 +212,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_staff_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -221,6 +226,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/tv_pnumber_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -256,6 +262,7 @@
                 android:layout_height="110dp">
 
                 <TextView
+                    android:id="@+id/tv_staff_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -269,6 +276,7 @@
                     android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/tv_pnumber_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
