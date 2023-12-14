@@ -96,6 +96,7 @@ public class booking_sel_staff extends AppCompatActivity {
                     // Xử lý khi click vào History
                     NavigationManager.navigateToHistory(booking_sel_staff.this);
                 } else if (id == R.id.action_acc) {
+                    NavigationManager.navigateToProfile(booking_sel_staff.this);
                     // Xử lý khi click vào Settings
                 }
 

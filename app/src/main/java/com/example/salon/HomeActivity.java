@@ -52,6 +52,7 @@ public class HomeActivity extends AppCompatActivity
                     // Xử lý khi click vào History
                     NavigationManager.navigateToHistory(HomeActivity.this);
                 } else if (id == R.id.action_acc) {
+                    NavigationManager.navigateToProfile(HomeActivity.this);
                     // Xử lý khi click vào Settings
                 }
 

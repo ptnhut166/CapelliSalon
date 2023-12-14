@@ -18,5 +18,9 @@ public class NavigationManager {
         Intent intent = new Intent(currentActivity, History.class);
         currentActivity.startActivity(intent);
     }
+    public  static  void navigateToProfile (Activity currenActivity) {
+        Intent intent = new Intent(currenActivity, Profile.class);
+        currenActivity.startActivity(intent);
+    }
 
 }

@@ -78,6 +78,22 @@
             android:exported="false">
 
         </activity>
+        <activity android:name=".Product"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".Payment_1"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".Payment_2"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".Profile"
+            android:exported="false">
+
+        </activity>
         <activity android:name=".Shopping"
                 android:exported="false">
 

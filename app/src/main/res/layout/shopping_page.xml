@@ -11,7 +11,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/back_shopping"
             android:layout_width="36dp"
             android:layout_height="38dp"
             android:layout_weight="1"
@@ -64,6 +64,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/product_0"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -119,6 +120,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/product_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -181,6 +183,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/product_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -236,6 +239,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/product_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -297,6 +301,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/product_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -352,6 +357,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/product_5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
@@ -413,6 +419,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/product_6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -468,6 +475,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/product_7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"

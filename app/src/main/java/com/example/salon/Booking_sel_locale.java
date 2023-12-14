@@ -75,6 +75,7 @@ public class Booking_sel_locale extends AppCompatActivity {
                     NavigationManager.navigateToHistory(Booking_sel_locale.this);
                 } else if (id == R.id.action_acc) {
                     // Xử lý khi click vào Settings
+                    NavigationManager.navigateToProfile(Booking_sel_locale.this);
                 }
 
                 return true;

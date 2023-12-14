@@ -84,6 +84,7 @@ public class Booking_sel_schedule extends AppCompatActivity {
                     // Xử lý khi click vào History
                     NavigationManager.navigateToHistory(Booking_sel_schedule.this);
                 } else if (id == R.id.action_acc) {
+                    NavigationManager.navigateToProfile(Booking_sel_schedule.this);
                     // Xử lý khi click vào Settings
                 }
 

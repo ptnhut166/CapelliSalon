@@ -70,11 +70,7 @@ public class NotiActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
 
-                if (id == R.id.action_noti) {
-                    // Xử lý khi click vào Notifications
-                    NavigationManager.navigateToNotifications(NotiActivity.this);
-                    // Không gọi finish() ở đây nếu bạn không muốn kết thúc Activity hiện tại
-                } else if (id == R.id.action_home) {
+                 if (id == R.id.action_home) {
                     // Xử lý khi click vào Home
                     NavigationManager.navigateToHome(NotiActivity.this);
                 } else if (id == R.id.action_cart) {
