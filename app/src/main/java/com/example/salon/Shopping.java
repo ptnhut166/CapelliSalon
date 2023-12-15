@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ImageButton;
 
 public class Shopping extends AppCompatActivity {
-    ImageButton back_shopping;
+    ImageButton back_shopping, cart_shopping;
+    private View.OnClickListener backProductClickListener;
     private void setProductOnClickListener(final LinearLayout product) {
         product.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -23,6 +24,7 @@ public class Shopping extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shopping_page);
+        cart_shopping = findViewById(R.id.img_button_cart);
         back_shopping = findViewById(R.id.back_shopping);
         LinearLayout[] products = new LinearLayout[8];
         products[0] = findViewById(R.id.product_0);
@@ -46,6 +48,16 @@ public class Shopping extends AppCompatActivity {
                 finish(); // Đóng activity hiện tại nếu cần
             }
         });
+        backProductClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Thực hiện hành động khi nhấn vào imageButton ở đây
+                Intent intent = new Intent(Shopping.this, Cart.class);
+                startActivity(intent);
+                // Không gọi finish() để giữ lại activity hiện tại
+            }
+        };
+        cart_shopping.setOnClickListener(backProductClickListener);
 
     }
 

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 
 public class Product extends AppCompatActivity {
-    private ImageButton backProductButton;
+    private ImageButton backProductButton, addProducttoCard;
     private Button buyButton;
     private View.OnClickListener buyButtonClickListener;
     private View.OnClickListener backProductClickListener;
@@ -17,10 +17,19 @@ public class Product extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_description_page);
-
+        addProducttoCard = findViewById(R.id.img_btn_addcart);
         buyButton = findViewById(R.id.btn_buy);
         backProductButton = findViewById(R.id.back_product);
-
+        backProductClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Thực hiện hành động khi nhấn vào imageButton ở đây
+                Intent intent = new Intent(Product.this, Cart.class);
+                startActivity(intent);
+                // Không gọi finish() để giữ lại activity hiện tại
+            }
+        };
+        addProducttoCard.setOnClickListener(backProductClickListener);
         // Click Listener for Buy Button
         buyButtonClickListener = new View.OnClickListener() {
             @Override

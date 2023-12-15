@@ -11,7 +11,7 @@ public class NavigationManager {
         currentActivity.startActivity(intent);
     }
     public static void navigateToCart(Activity currentActivity) {
-        Intent intent = new Intent(currentActivity, Shopping.class);
+        Intent intent = new Intent(currentActivity, Cart.class);
         currentActivity.startActivity(intent);
     }
     public static void navigateToHistory(Activity currentActivity) {

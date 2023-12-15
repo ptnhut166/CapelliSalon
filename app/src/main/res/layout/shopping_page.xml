@@ -35,7 +35,7 @@
             android:src="@drawable/shopping_search_icon_img3" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/img_button_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
