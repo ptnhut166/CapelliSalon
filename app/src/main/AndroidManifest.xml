@@ -33,7 +33,15 @@
 
         <activity
             android:name=".Booking_sel_locale"
+<<<<<<< Updated upstream
             android:exported="false">
+=======
+
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> Stashed changes
 
 
         </activity>
@@ -71,11 +79,16 @@
 
         </activity>
         <activity android:name=".test"
+<<<<<<< Updated upstream
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+=======
+            android:exported="false">
+
+>>>>>>> Stashed changes
         </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>

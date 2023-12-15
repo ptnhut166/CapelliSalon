@@ -2,6 +2,7 @@ package com.example.salon;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,16 +27,18 @@ public class test extends AppCompatActivity {
         FirebaseDatabase dataBase= FirebaseDatabase.getInstance();
         DatabaseReference ref = dataBase.getReference("user_choice");
 
-                    ref.child("booking_sel_employee").setValue(null)
+                    ref.child("booking_sel_employee").setValue("")
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
                     // Dữ liệu đã được ghi thành công vào cơ sở dữ liệu
-                    Log.d("Firebase", "Ghi dữ liệu thành công");
+                    // Hiển thị thông báo thành công bằng Toast
+                    Toast.makeText(getApplicationContext(), "Ghi dữ liệu thành công", Toast.LENGTH_SHORT).show();
                 } else {
                     // Xảy ra lỗi khi ghi dữ liệu
-                    Log.e("Firebase", "Lỗi khi ghi dữ liệu", task.getException());
+                    // Hiển thị thông báo lỗi bằng Toast
+                    Toast.makeText(getApplicationContext(), "Lỗi khi ghi dữ liệu", Toast.LENGTH_SHORT).show();
                 }
             }
         });
