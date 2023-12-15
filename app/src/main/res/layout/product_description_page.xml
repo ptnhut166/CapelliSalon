@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/back_product"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:backgroundTint="#FFFFFF"
@@ -111,7 +111,7 @@
             android:src="@drawable/shopping_icon_img2" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/btn_buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

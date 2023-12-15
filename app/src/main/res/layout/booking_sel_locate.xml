@@ -92,10 +92,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="376dp"
-            android:layout_marginLeft="376dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginRight="9dp"
+            android:layout_marginStart="-3dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginEnd="388dp"
+            android:layout_marginRight="388dp"
             android:src="@drawable/icon_back" />
 
     </RelativeLayout>
@@ -131,7 +131,7 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
-                    android:id="@+id/tv_name_locale"
+                    android:id="@+id/tv_locate_name_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -145,7 +145,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_address_locale"
+                    android:id="@+id/tv_locate_address_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -165,6 +165,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_locate_name_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -178,6 +179,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_locate_address_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -210,6 +212,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_locate_name_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -223,6 +226,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_locate_address_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -260,6 +264,7 @@
                 android:layout_height="110dp">
 
                 <TextView
+                    android:id="@+id/tv_locate_name_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -273,6 +278,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_locate_address_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -313,7 +319,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bnv"
+            android:id="@+id/bnv_locate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/menu_bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>

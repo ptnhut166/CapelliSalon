@@ -27,21 +27,21 @@ public class test extends AppCompatActivity {
         FirebaseDatabase dataBase= FirebaseDatabase.getInstance();
         DatabaseReference ref = dataBase.getReference("user_choice");
 
-                    ref.child("booking_sel_employee").setValue("")
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()) {
-                    // Dữ liệu đã được ghi thành công vào cơ sở dữ liệu
-                    // Hiển thị thông báo thành công bằng Toast
-                    Toast.makeText(getApplicationContext(), "Ghi dữ liệu thành công", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Xảy ra lỗi khi ghi dữ liệu
-                    // Hiển thị thông báo lỗi bằng Toast
-                    Toast.makeText(getApplicationContext(), "Lỗi khi ghi dữ liệu", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        ref.child("booking_sel_employee").setValue("")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            // Dữ liệu đã được ghi thành công vào cơ sở dữ liệu
+                            // Hiển thị thông báo thành công bằng Toast
+                            Toast.makeText(getApplicationContext(), "Ghi dữ liệu thành công", Toast.LENGTH_SHORT).show();
+                        } else {
+                            // Xảy ra lỗi khi ghi dữ liệu
+                            // Hiển thị thông báo lỗi bằng Toast
+                            Toast.makeText(getApplicationContext(), "Lỗi khi ghi dữ liệu", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
 //                    ref.child("booking_sel_loc").setValue("Location Name");
 //                    ref.child("booking_sel_schedule").setValue("Schedule Time");
     }

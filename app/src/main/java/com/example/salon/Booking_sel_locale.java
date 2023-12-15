@@ -1,15 +1,19 @@
 package com.example.salon;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.appcheck.FirebaseAppCheck;
 import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory;
@@ -21,13 +25,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Booking_sel_locale extends AppCompatActivity {
-
+    RelativeLayout location, location0, location1, location2, location3;
+    TextView name0, name1, name2, name3, address0, address1, address2, address3;
     FirebaseDatabase dataBase;
-<<<<<<< Updated upstream
-    RelativeLayout location;
-    RelativeLayout test;
 
-=======
     BookingInfo bookingInfo;
     String userID;
 
@@ -66,51 +67,33 @@ public class Booking_sel_locale extends AppCompatActivity {
     }
 
     @Override
->>>>>>> Stashed changes
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        FirebaseApp.initializeApp(/*context=*/ this);
-        FirebaseAppCheck firebaseAppCheck = FirebaseAppCheck.getInstance();
-        firebaseAppCheck.installAppCheckProviderFactory(DebugAppCheckProviderFactory.getInstance());
         setContentView(R.layout.booking_sel_locate);
-
-        //declare and initialize views
-        ImageButton imageButton = (ImageButton) findViewById(R.id.ibutton_next);
-        dataBase= FirebaseDatabase.getInstance();
-        location = (RelativeLayout)findViewById(R.id.location_0);
-//        location[1] = (RelativeLayout)findViewById(R.id.location_1);
-
-<<<<<<< Updated upstream
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            //setup intent
+        BottomNavigationView bottomNav = findViewById(R.id.bnv_locate); // Thay R.id.bottom_navigation bằng ID của BottomNavigationView trong layout của bạn
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                location.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if(location.isSelected() == true) {
-//                    // Lấy tham chiếu đến node 'user_choice'
-//                    DatabaseReference ref = dataBase.getReference("user_choice");
-//                    // Thêm mới hoặc cập nhật dữ liệu
-//                    ref.child("booking_sel_employee").setValue("Employee Name");
-//                    ref.child("booking_sel_loc").setValue("Location Name");
-//                    ref.child("booking_sel_schedule").setValue("Schedule Time");
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
 
-                            //setup intent
-                            Intent intent = new Intent(Booking_sel_locale.this, Booking_sel_schedule.class);
-                            startActivity(intent);
+                if (id == R.id.action_noti) {
+                    // Xử lý khi click vào Notifications
+                    NavigationManager.navigateToNotifications(Booking_sel_locale.this);
+                    // Không gọi finish() ở đây nếu bạn không muốn kết thúc Activity hiện tại
+                } else if (id == R.id.action_home) {
+                    // Xử lý khi click vào Home
+                    NavigationManager.navigateToHome(Booking_sel_locale.this);
+                } else if (id == R.id.action_cart) {
+                    // Xử lý khi click vào Cart
+                    NavigationManager.navigateToCart(Booking_sel_locale.this);
+                } else if (id == R.id.action_his) {
+                    // Xử lý khi click vào History
+                    NavigationManager.navigateToHistory(Booking_sel_locale.this);
+                } else if (id == R.id.action_acc) {
+                    // Xử lý khi click vào Settings
+                    NavigationManager.navigateToProfile(Booking_sel_locale.this);
+                }
 
-
-                        }
-                    }
-                });
-
-            }
-
-        });
-
-=======
                 return true;
             }
         });
@@ -135,10 +118,30 @@ public class Booking_sel_locale extends AppCompatActivity {
         setLocationOnClickListener(location3, name3, address3);
 
         ImageButton imageButton = findViewById(R.id.ibutton_next);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Đưa logic xử lý khi nhấn vào imageButton ở đây (nếu có)
+                location.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(location.isSelected() == true) {
+//                    // Lấy tham chiếu đến node 'user_choice'
+//                    DatabaseReference ref = dataBase.getReference("user_choice");
+//                    // Thêm mới hoặc cập nhật dữ liệu
+//                    ref.child("booking_sel_employee").setValue("Employee Name");
+//                    ref.child("booking_sel_loc").setValue("Location Name");
+//                    ref.child("booking_sel_schedule").setValue("Schedule Time");
+
+                            //setup intent
+                            Intent intent = new Intent(Booking_sel_locale.this, Booking_sel_schedule.class);
+                            startActivity(intent);
 
 
->>>>>>> Stashed changes
+                        }
+                    }
+                });
+            }
+        });
     }
-
-
 }
