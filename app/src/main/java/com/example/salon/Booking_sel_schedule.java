@@ -4,14 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Booking_sel_schedule extends AppCompatActivity {
 
-<<<<<<< Updated upstream
-=======
+
     ImageButton back;
     RelativeLayout schedule0, schedule1, schedule2, schedule3;
     TextView time0, time1, time2, time3;
@@ -45,7 +50,7 @@ public class Booking_sel_schedule extends AppCompatActivity {
         });
     }
 
->>>>>>> Stashed changes
+
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
