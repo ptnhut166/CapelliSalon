@@ -1,6 +1,7 @@
 package com.example.salon;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,7 +29,7 @@ public class booking_sel_staff extends AppCompatActivity {
         staff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                staff.setBackgroundColor(getResources().getColor(R.color.Gray_background_color));
+                staff.setBackgroundColor(Color.parseColor("#B7B7B7"));
                 String namestaff = namestaffTextview.getText().toString();
                 String pnumber = pnumberTextview.getText().toString();
                 BookingInfo bookingInfo = new BookingInfo("", "", "", namestaff, pnumber);

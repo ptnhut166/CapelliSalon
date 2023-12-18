@@ -6,6 +6,7 @@ public class BookingInfo implements Serializable {
     private String time;
     private String nameStaff;
     private String phoneNumber;
+//    private String userID;
 
     public BookingInfo(String name, String address, String time, String nameStaff, String phoneNumber) {
         this.name = name;
@@ -13,7 +14,15 @@ public class BookingInfo implements Serializable {
         this.time = time;
         this.nameStaff = nameStaff;
         this.phoneNumber = phoneNumber;
+//        this.userID =  userID;
     }
+//    public String getUserID() {
+//        return userID;
+//    }
+//
+//    public void setUserID(String name) {
+//        this.userID= userID;
+//    }
 
     public String getName() {
         return name;
