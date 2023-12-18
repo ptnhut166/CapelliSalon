@@ -28,6 +28,7 @@ public class booking_sel_staff extends AppCompatActivity {
         staff.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                staff.setBackgroundColor(getResources().getColor(R.color.Gray_background_color));
                 String namestaff = namestaffTextview.getText().toString();
                 String pnumber = pnumberTextview.getText().toString();
                 BookingInfo bookingInfo = new BookingInfo("", "", "", namestaff, pnumber);

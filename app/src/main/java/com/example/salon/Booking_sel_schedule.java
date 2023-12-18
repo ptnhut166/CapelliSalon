@@ -30,6 +30,7 @@ public class Booking_sel_schedule extends AppCompatActivity {
             public void onClick(View v) {
                 // Thực hiện hành động khi nhấn vào schedule ở đây
                 // Thêm logic kiểm tra sự lựa chọn nếu cần
+                schedule.setBackgroundColor(getResources().getColor(R.color.Gray_background_color));
                 String time = timeTextview.getText().toString();
                 BookingInfo bookingInfo = new BookingInfo("", "", time, "", "");
                 // Sử dụng thông tin name và address ở đây (ví dụ: hiển thị hoặc xử lý thông tin)

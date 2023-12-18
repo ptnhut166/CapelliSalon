@@ -113,7 +113,8 @@
             <RelativeLayout
                 android:id="@+id/location_0"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
 
                 <ImageView
                     android:id="@+id/iv_capeli_locale1"
@@ -162,7 +163,8 @@
             <RelativeLayout
                 android:id="@+id/location_1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
 
                 <TextView
                     android:id="@+id/tv_locate_name_1"
@@ -209,7 +211,8 @@
             <RelativeLayout
                 android:id="@+id/location_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
 
                 <TextView
                     android:id="@+id/tv_locate_name_2"
@@ -261,7 +264,8 @@
             <RelativeLayout
                 android:id="@+id/location_3"
                 android:layout_width="match_parent"
-                android:layout_height="110dp">
+                android:layout_height="110dp"
+                android:background="#FFFFFF">
 
                 <TextView
                     android:id="@+id/tv_locate_name_3"

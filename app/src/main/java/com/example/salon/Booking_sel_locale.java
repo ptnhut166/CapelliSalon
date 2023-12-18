@@ -38,6 +38,7 @@ public class Booking_sel_locale extends AppCompatActivity {
             public void onClick(View v) {
                 // Thực hiện hành động khi nhấn vào location ở đây
                 String name = nameTextView.getText().toString();
+                location.setBackgroundColor(getResources().getColor(R.color.Gray_background_color));
                 String address = addressTextView.getText().toString();
 
                 bookingInfo = new BookingInfo(name, address, "", "", "");

@@ -105,10 +105,12 @@
             android:layout_height="394dp"
             android:background="#4D000000"
             android:orientation="vertical">
+
             <RelativeLayout
                 android:id="@+id/schedule_0"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
 
                 <ImageView
                     android:id="@+id/iv_capeli_locale1"
@@ -137,7 +139,7 @@
                     android:layout_marginEnd="79dp"
                     android:layout_marginRight="79dp"
                     android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
 
             </RelativeLayout>
@@ -145,7 +147,8 @@
             <RelativeLayout
                 android:id="@+id/schedule_1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
 
                 <TextView
                     android:id="@+id/tv_time_1"
@@ -159,8 +162,7 @@
                     android:layout_marginEnd="79dp"
                     android:layout_marginRight="79dp"
                     android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
-                    android:textStyle="bold"/>
-
+                    android:textStyle="bold" />
 
 
                 <ImageView
@@ -181,7 +183,8 @@
             <RelativeLayout
                 android:id="@+id/schedule_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
 
                 <TextView
                     android:id="@+id/tv_time_2"
@@ -195,8 +198,7 @@
                     android:layout_marginEnd="79dp"
                     android:layout_marginRight="79dp"
                     android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
-                    android:textStyle="bold"/>
-
+                    android:textStyle="bold" />
 
 
                 <ImageView
@@ -217,7 +219,8 @@
             <RelativeLayout
                 android:id="@+id/schedule_3"
                 android:layout_width="match_parent"
-                android:layout_height="110dp">
+                android:layout_height="110dp"
+                android:background="#FFFFFF">
 
                 <TextView
                     android:id="@+id/tv_time_3"
@@ -231,8 +234,7 @@
                     android:layout_marginEnd="79dp"
                     android:layout_marginRight="79dp"
                     android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
-                    android:textStyle="bold"/>
-
+                    android:textStyle="bold" />
 
 
                 <ImageView
