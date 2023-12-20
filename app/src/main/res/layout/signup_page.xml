@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="cursive"
         android:text="Capelli"
         android:textAllCaps="false"
@@ -35,9 +35,33 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="216dp"
+        android:layout_height="281dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_name_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter your desired name"
+                android:inputType="text" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -59,8 +83,8 @@
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:hint="Enter your email"/>
+                android:hint="Enter your email"
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
@@ -82,8 +106,8 @@
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:hint="Enter your password"/>
+                android:hint="Enter your password"
+                android:inputType="text" />
         </TableRow>
 
         <TableRow
@@ -105,18 +129,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
-                android:hint="Confirm your password"/>
+                android:hint="Confirm your password"
+                android:inputType="text" />
+
         </TableRow>
 
     </TableLayout>
 
     <ProgressBar
         android:id="@+id/progressbar"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:visibility="gone">
 
     </ProgressBar>
     <Button

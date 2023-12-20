@@ -2,11 +2,16 @@ package com.example.salon;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,15 @@ public class Profile extends AppCompatActivity {
                 }
 
                 return true;
+            }
+        });
+        String userid = RegisterActivity.user.getUid();
+
+        Button buttonTest = findViewById(R.id.btn_getUserid);
+        buttonTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Profile.this, userid, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -7,11 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,7 +22,7 @@ public class booking_confirm extends AppCompatActivity {
         setContentView(R.layout.booking_confirm);
         back = findViewById(R.id.back_confirm);
         Intent intent = getIntent();
-        BookingInfo bookingInfo = (BookingInfo) intent.getSerializableExtra("booking_info");
+        user_class user_class = (user_class) intent.getSerializableExtra("booking_info");
         final CheckBox checkBox = findViewById(R.id.checkBox);
         final Button btn_book_now = findViewById(R.id.btn_book_now);
         BottomNavigationView bottomNav = findViewById(R.id.bnv_confirm); // Thay R.id.bottom_navigation bằng ID của BottomNavigationView trong layout của bạn
@@ -72,7 +70,7 @@ public class booking_confirm extends AppCompatActivity {
 
         btn_book_now.setOnClickListener(v -> {
             Intent newintent = new Intent(booking_confirm.this, NotiActivity.class);
-            newintent.putExtra("booking_info", bookingInfo);
+            newintent.putExtra("booking_info", user_class);
             startActivity(newintent);
             Toast.makeText(booking_confirm.this, "Successful registration", Toast.LENGTH_SHORT).show();
             finish();

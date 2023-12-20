@@ -29,7 +29,7 @@ public class NotiActivity extends AppCompatActivity {
         setContentView(R.layout.notifications_page);
         listnoti = findViewById(R.id.notificationListView);
         Intent intent = getIntent();
-        BookingInfo bookingInfo = (BookingInfo) intent.getSerializableExtra("booking_info");
+        user_class user_class = (user_class) intent.getSerializableExtra("booking_info");
         notificationList = new ArrayList<>();
 
         // Populate the ArrayList with booking information
@@ -47,11 +47,11 @@ public class NotiActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Xử lý khi dữ liệu thay đổi
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    BookingInfo bookingInfo = snapshot.getValue(BookingInfo.class);
+                    user_class user_class = snapshot.getValue(user_class.class);
                     // Sử dụng bookingInfo ở đây
-                    if (bookingInfo != null) {
+                    if (user_class != null) {
                         // Tạo chuỗi thông tin từ đối tượng BookingInfo và thêm vào danh sách thông báo
-                        String info = "Registration successful!" + "\n" + bookingInfo.getName() + "\n" + bookingInfo.getAddress() + "\n" + bookingInfo.getTime() + "\n" + bookingInfo.getNameStaff() + "\n" + bookingInfo.getPhoneNumber();
+                        String info = "Registration successful!" + "\n" + user_class.getName() + "\n" + user_class.getAddress() + "\n" + user_class.getTime() + "\n" + user_class.getNameStaff() + "\n" + user_class.getPhoneNumber();
                         notificationList.add(info);
                     }
                 }

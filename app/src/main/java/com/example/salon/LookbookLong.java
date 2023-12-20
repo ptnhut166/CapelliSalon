@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import androidx.annotation.Nullable;
@@ -16,6 +17,9 @@ public class LookbookLong extends AppCompatActivity {
     int[] imgLong = {R.drawable.lookbook_img1,R.drawable.lookbook_img2,R.drawable.lookbook_img3};
     Button prevLong, nextLong;
 
+    public static void hellO_function(){
+//        Toast.makeText(this,"HelloWorld", Toast.LENGTH_SHORT).show();;
+    }
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

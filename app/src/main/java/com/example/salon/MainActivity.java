@@ -26,6 +26,4 @@ public class MainActivity extends AppCompatActivity {
                 PlayIntegrityAppCheckProviderFactory.getInstance());
         // [END appcheck_initialize]
     }
-
-
 }

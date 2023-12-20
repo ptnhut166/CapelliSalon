@@ -2,7 +2,6 @@ package com.example.salon;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,22 +13,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.appcheck.FirebaseAppCheck;
-import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class Booking_sel_locale extends AppCompatActivity {
     RelativeLayout location, location0, location1, location2, location3;
     TextView name0, name1, name2, name3, address0, address1, address2, address3;
     FirebaseDatabase dataBase;
 
-    BookingInfo bookingInfo;
+    user_class user_class;
     String userID;
 
     private void setLocationOnClickListener(final RelativeLayout location, final TextView nameTextView, final TextView addressTextView) {
@@ -41,7 +33,7 @@ public class Booking_sel_locale extends AppCompatActivity {
                 location.setBackgroundColor(getResources().getColor(R.color.Gray_background_color));
                 String address = addressTextView.getText().toString();
 
-                bookingInfo = new BookingInfo(name, address, "", "", "");
+
                 // Sử dụng thông tin name và address ở đây (ví dụ: hiển thị hoặc xử lý thông tin)
                 // Ví dụ:
                 Toast.makeText(getApplicationContext(), "Selected Name: " + name + ", Address: " + address, Toast.LENGTH_SHORT).show();
@@ -56,7 +48,7 @@ public class Booking_sel_locale extends AppCompatActivity {
                     bookingRef.setValue(address);
                 }
                 Intent intent = new Intent(Booking_sel_locale.this, Booking_sel_schedule.class);
-                intent.putExtra("booking_info", bookingInfo);
+                intent.putExtra("booking_info", user_class);
                 startActivity(intent);
                 finish(); // Đóng activity hiện tại nếu cần
 //                DatabaseReference ref = dataBase.getReference("user_choice");
@@ -71,6 +63,7 @@ public class Booking_sel_locale extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.booking_sel_locate);
+
         BottomNavigationView bottomNav = findViewById(R.id.bnv_locate); // Thay R.id.bottom_navigation bằng ID của BottomNavigationView trong layout của bạn
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

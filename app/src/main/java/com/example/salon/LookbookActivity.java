@@ -22,6 +22,7 @@ public class LookbookActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
+
         //Gán Listener cho editbutton
         btn_long.setOnClickListener(listenerLogin);
     }

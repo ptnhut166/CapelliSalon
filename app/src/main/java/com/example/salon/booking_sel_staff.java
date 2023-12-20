@@ -7,13 +7,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -23,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class booking_sel_staff extends AppCompatActivity {
     RelativeLayout staff0, staff1, staff2, staff3;
     TextView namestaff0, namestaff1, namestaff2, namestaff3, phone0, phone1, phone2,phone3;
-    BookingInfo bookingInfo;
+    user_class user_class;
     String userID;
     private void setStaffOnClickListener(final RelativeLayout staff, final  TextView namestaffTextview, final  TextView pnumberTextview) {
         staff.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +30,7 @@ public class booking_sel_staff extends AppCompatActivity {
                 staff.setBackgroundColor(Color.parseColor("#B7B7B7"));
                 String namestaff = namestaffTextview.getText().toString();
                 String pnumber = pnumberTextview.getText().toString();
-                BookingInfo bookingInfo = new BookingInfo("", "", "", namestaff, pnumber);
+                user_class user_class = new user_class("", "","", "", namestaff, pnumber);
 
                 Toast.makeText(getApplicationContext(), "Selected Name: " + namestaff + ", Phone number: " + pnumber, Toast.LENGTH_SHORT).show();
 
@@ -48,7 +46,7 @@ public class booking_sel_staff extends AppCompatActivity {
                 }
                 //intent
                 Intent intent = new Intent(booking_sel_staff.this, booking_confirm.class);
-                intent.putExtra("booking_info", bookingInfo);
+                intent.putExtra("booking_info", user_class);
                 startActivity(intent);
                 finish();
             }
@@ -75,13 +73,13 @@ public class booking_sel_staff extends AppCompatActivity {
         setStaffOnClickListener(staff2, namestaff2, phone2);
         setStaffOnClickListener(staff3, namestaff3, phone3);
         Intent intent = getIntent();
-        BookingInfo bookingInfo = (BookingInfo) intent.getSerializableExtra("booking_info");
+        user_class user_class = (user_class) intent.getSerializableExtra("booking_info");
 // hoặc sử dụng getParcelableExtra nếu bạn đã sử dụng Parcelable
-        if (bookingInfo != null) {
+        if (user_class != null) {
             // Kiểm tra xem dữ liệu đã được chuyển qua hay chưa bằng cách in ra log
-            Log.d("BookingInfo", "Name: " + bookingInfo.getName());
-            Log.d("BookingInfo", "Address: " + bookingInfo.getAddress());
-            Log.d("BookingInfo", "Time: " + bookingInfo.getTime());
+            Log.d("BookingInfo", "Name: " + user_class.getName());
+            Log.d("BookingInfo", "Address: " + user_class.getAddress());
+            Log.d("BookingInfo", "Time: " + user_class.getTime());
             // Kiểm tra các trường thông tin khác tương tự ở đây
         } else {
             Log.d("BookingInfo", "Null bookingInfo received");

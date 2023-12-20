@@ -21,12 +21,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ForgotActivity extends AppCompatActivity {
     TextInputEditText edt_email;
-
-
     Button btn_forgot;
     FirebaseAuth mAuth;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
