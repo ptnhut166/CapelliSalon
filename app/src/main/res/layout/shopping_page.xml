@@ -27,7 +27,7 @@
             android:inputType="text" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imgbtn_shop_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             android:src="@drawable/shopping_search_icon_img3" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/imgbtn_shop_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,7 +43,7 @@
             android:src="@drawable/shopping_icon_img2" />
 
         <ImageButton
-            android:id="@+id/imageButton6"
+            android:id="@+id/imgbtn_shop_chat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,14 +70,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic0"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -88,20 +88,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product0"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -109,7 +109,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -127,14 +127,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic1"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -145,20 +145,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -166,7 +166,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -189,14 +189,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic2"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -207,20 +207,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product2"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -228,7 +228,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -246,14 +246,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic3"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -264,20 +264,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -285,7 +285,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -307,14 +307,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic4"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -325,20 +325,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product4"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -346,7 +346,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -364,14 +364,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic5"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -382,20 +382,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -403,7 +403,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -425,14 +425,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic6"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -443,20 +443,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product6"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -464,7 +464,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -482,14 +482,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic7"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -500,20 +500,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -521,7 +521,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -542,14 +542,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic8"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -560,20 +560,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product8"
                             android:layout_width="25dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -581,7 +581,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -598,14 +598,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/iv_shop_product_pic9"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
 
                         app:srcCompat="@drawable/coconutshampoo" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/tv_shop_product9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Product name" />
@@ -616,20 +616,20 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/tv_price_label9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Price:" />
 
                         <TextView
-                            android:id="@+id/textView14"
+                            android:id="@+id/tv_shop_price_product9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="$10" />
 
                         <TextView
-                            android:id="@+id/textView15"
+                            android:id="@+id/tv_shop_soldout_label_product9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -637,7 +637,7 @@
                             android:textAlignment="textEnd" />
 
                         <TextView
-                            android:id="@+id/textView16"
+                            android:id="@+id/tv_shop_value_sold_out_product9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

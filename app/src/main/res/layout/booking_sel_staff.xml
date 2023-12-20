@@ -245,7 +245,7 @@
 
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/iv_shop_product_pic2"
                     android:layout_width="81dp"
                     android:layout_height="81dp"
                     android:layout_alignParentStart="true"
