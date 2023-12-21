@@ -26,16 +26,15 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity{
     TextInputEditText edt_email, edt_password;
     Button btn_login, btn_signup,btn_forgot;
-    FirebaseAuth mAuth;
+    
 
-
-
+    
 
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        FirebaseUser currentUser = user_class.mAuth.getCurrentUser();
 
         if(currentUser != null){
             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
@@ -53,7 +52,7 @@ public class LoginActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
-        mAuth = FirebaseAuth.getInstance();
+        user_class.mAuth = FirebaseAuth.getInstance();
         edt_email = findViewById(R.id.edt_login_email);
         edt_password = findViewById(R.id.edt_login_password);
         btn_login = findViewById(R.id.btn_login);
@@ -81,7 +80,7 @@ public class LoginActivity extends AppCompatActivity{
                     return;
                 }
                 if(email.length()>0 && password.length()>0){
-                    mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    user_class.mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){

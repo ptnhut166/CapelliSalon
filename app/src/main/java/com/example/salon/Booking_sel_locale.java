@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,8 +23,8 @@ public class Booking_sel_locale extends AppCompatActivity {
     FirebaseDatabase dataBase;
 
     user_class user_class;
-    String userID;
-
+    FirebaseUser user = user_class.mAuth.getCurrentUser();
+    String userID = user.getUid();
     private void setLocationOnClickListener(final RelativeLayout location, final TextView nameTextView, final TextView addressTextView) {
         location.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,9 +39,9 @@ public class Booking_sel_locale extends AppCompatActivity {
                 // Ví dụ:
                 Toast.makeText(getApplicationContext(), "Selected Name: " + name + ", Address: " + address, Toast.LENGTH_SHORT).show();
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                userID = "1";
-                if (userID != null && userID != database.getReference().child("userID").child(userID).get().toString()) {
 
+//                if (userID != null && userID == database.getReference().child("userID").child(userID).get().toString()) {
+                    if(userID != null){
                     DatabaseReference bookingRef = database.getReference().child("userID").child(userID).child("InfoBooking").child("Location name");
                     bookingRef.setValue(name);
 

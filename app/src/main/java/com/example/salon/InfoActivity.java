@@ -28,7 +28,6 @@ public class InfoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-        btn_logout.setOnClickListener(listenerLogout);
     }
 
 }

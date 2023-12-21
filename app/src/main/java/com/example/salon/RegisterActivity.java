@@ -33,10 +33,11 @@ public class RegisterActivity extends AppCompatActivity {
     Button btnSignUp, btnLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-    FirebaseDatabase database;
-    public FirebaseUser user;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public static FirebaseUser user;
+
     public String uid;
-    ArrayList<user_class> list_userClass = new ArrayList<>();
+//    public  static ArrayList<user_class> list_userClass = new ArrayList<>();
     protected void onCreate(Bundle savedInstanceState)
     {
         FirebaseApp.initializeApp(/*context=*/ this);
@@ -46,7 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_page);
 
-        mAuth=FirebaseAuth.getInstance();
+        user_class.mAuth=FirebaseAuth.getInstance();
         editTextName = findViewById(R.id.edt_name);
         btnLogin = findViewById(R.id.change_login);
 
@@ -56,7 +57,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         btnSignUp=findViewById(R.id.btn_register);
         progressBar=findViewById(R.id.progressbar);
-        database = FirebaseDatabase.getInstance();
 
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if(email.length()>0 && password.length()>0 && name.length() >0){
                     progressBar.setVisibility(View.VISIBLE);
-                    mAuth.createUserWithEmailAndPassword(email, password)
+                    user_class.mAuth.createUserWithEmailAndPassword(email, password)
                             .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -91,14 +91,15 @@ public class RegisterActivity extends AppCompatActivity {
 
                                         // Sign in success, update UI with the signed-in user's information
 
-                                        user = mAuth.getCurrentUser();
+                                        user = user_class.mAuth.getCurrentUser();
                                         uid = user.getUid();
                                         user_class newUser = new user_class(uid,"","","","","");
 
                                         database.getReference().child("userID").child(uid).setValue("");
 
                                         Toast.makeText(RegisterActivity.this, newUser.getUserID(), Toast.LENGTH_SHORT).show();
-                                        list_userClass.add(newUser);
+
+                                        userList.userClassList.add(newUser);
                                         Intent intent =new Intent(getApplicationContext(), LoginActivity.class);
                                         startActivity(intent);
                                         finish();

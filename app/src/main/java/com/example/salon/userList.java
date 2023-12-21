@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class userList extends AppCompatActivity {
-    private ArrayList<user_class> userClassList = new ArrayList<>();
+    public static ArrayList<user_class> userClassList = new ArrayList<>();
 
     public void addUser(user_class user_class) {
         userClassList.add(user_class);

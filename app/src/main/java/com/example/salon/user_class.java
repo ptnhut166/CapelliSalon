@@ -1,5 +1,7 @@
 package com.example.salon;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.io.Serializable;
 public class user_class implements Serializable {
     private String uid;
@@ -8,7 +10,7 @@ public class user_class implements Serializable {
     private String time;
     private String nameStaff;
     private String phoneNumber;
-
+    public static FirebaseAuth mAuth;
 
     public user_class(String uid, String name, String address, String time, String nameStaff, String phoneNumber) {
         this.uid = uid;
@@ -61,7 +63,7 @@ public class user_class implements Serializable {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber){
         this.phoneNumber = phoneNumber;
     }
 }

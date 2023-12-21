@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,7 +23,8 @@ public class Booking_sel_schedule extends AppCompatActivity {
     RelativeLayout schedule0, schedule1, schedule2, schedule3;
     TextView time0, time1, time2, time3;
     user_class user_class;
-    String userID;
+    FirebaseUser user = user_class.mAuth.getCurrentUser();
+    String userID = user.getUid();
     private void setScheduleOnClickListener(final RelativeLayout schedule, final TextView timeTextview) {
         schedule.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +40,8 @@ public class Booking_sel_schedule extends AppCompatActivity {
 
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                userID = "1";
-                if (userID != null && userID != database.getReference().child("userID").child(userID).get().toString()) {
+
+                if (userID != null ) {
 
                     DatabaseReference bookingRef = database.getReference().child("userID").child(userID).child("InfoBooking").child("Time");
                     bookingRef.setValue(time);

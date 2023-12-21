@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,7 +23,8 @@ public class booking_sel_staff extends AppCompatActivity {
     RelativeLayout staff0, staff1, staff2, staff3;
     TextView namestaff0, namestaff1, namestaff2, namestaff3, phone0, phone1, phone2,phone3;
     user_class user_class;
-    String userID;
+    FirebaseUser user = user_class.mAuth.getCurrentUser();
+    String userID = user.getUid();
     private void setStaffOnClickListener(final RelativeLayout staff, final  TextView namestaffTextview, final  TextView pnumberTextview) {
         staff.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,8 +37,8 @@ public class booking_sel_staff extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Selected Name: " + namestaff + ", Phone number: " + pnumber, Toast.LENGTH_SHORT).show();
 
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                userID = "1"; // value kiểm thử, đợi a nhựt làm userID đã
-                if (userID != null && userID != database.getReference().child("userID").child(userID).get().toString()) {
+
+                if (userID != null) {
 
                     DatabaseReference bookingRef = database.getReference().child("userID").child(userID).child("InfoBooking").child("Staff name");
                     bookingRef.setValue(namestaff);

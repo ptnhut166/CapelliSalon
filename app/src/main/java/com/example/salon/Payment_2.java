@@ -50,8 +50,5 @@ public class Payment_2 extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 }
