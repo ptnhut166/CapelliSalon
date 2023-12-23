@@ -80,6 +80,7 @@ public class NotiActivity extends AppCompatActivity {
                     NavigationManager.navigateToHistory(NotiActivity.this);
                 } else if (id == R.id.action_acc) {
                     // Xử lý khi click vào Settings
+                     NavigationManager.navigateToProfile(NotiActivity.this);
                 }
 
                 return true;
