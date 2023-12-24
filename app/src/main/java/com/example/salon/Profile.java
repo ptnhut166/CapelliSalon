@@ -5,21 +5,22 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
 
 public class Profile extends AppCompatActivity {
     private String uid;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile_after_change);
+        setContentView(R.layout.profile);
         BottomNavigationView bottomNav = findViewById(R.id.bnv_profile); // Thay R.id.bottom_navigation bằng ID của BottomNavigationView trong layout của bạn
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -62,11 +63,29 @@ public class Profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton imgbutton = findViewById(R.id.imgbtn_profile_infoEdit);
+        imgbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Profile.this, Profile_edit.class);
+                startActivity(intent);
+            }
+        });
+
         uid = user_class.mAuth.getUid();
+        FirebaseDatabase database = user_class.Database.getInstance();
         TextView id_profile = findViewById(R.id.id_profile);
-        id_profile.setText("");
+        TextView tv_profile = findViewById(R.id.tv_profile_name);
+        TextView name = findViewById(R.id.tv_profile_name);
+        TextView address = findViewById(R.id.tv_profile_address);
+        TextView phone = findViewById(R.id.tv_profile_mobile);
+        TextView birthday = findViewById(R.id.tv_profile_dob);
+
+        //setID
+        id_profile.setText(uid);
 
         //setName
+//        database.getReference().child("userID").child(uid).child("InfoBooking").
         //setAddress
         //setPhone
         //setD.O.B

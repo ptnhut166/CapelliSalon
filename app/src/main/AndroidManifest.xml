@@ -106,7 +106,11 @@
 
         </activity>
         <activity android:name=".test"
-            android:exported="true">
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".Profile_edit"
+            android:exported="false">
 
         </activity>
     </application>

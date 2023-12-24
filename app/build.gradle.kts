@@ -46,6 +46,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.cardview:cardview:1.0.0")
 
+
     //I use those lib below for login with phone number
     // Import the BoM for the Firebase platform
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
@@ -58,5 +59,5 @@ dependencies {
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation("com.google.firebase:firebase-appcheck-playintegrity")
     implementation("com.google.firebase:firebase-appcheck-debug")
-
+    implementation ("com.google.firebase:firebase-analytics:21.5.0")
 }

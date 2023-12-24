@@ -39,7 +39,7 @@ public class Booking_sel_schedule extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Selected Time: " + time, Toast.LENGTH_SHORT).show();
 
 
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                FirebaseDatabase database = com.example.salon.user_class.Database.getInstance();
 
                 if (userID != null ) {
 

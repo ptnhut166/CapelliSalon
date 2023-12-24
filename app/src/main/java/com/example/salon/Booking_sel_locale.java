@@ -17,10 +17,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.lang.ref.Reference;
+
 public class Booking_sel_locale extends AppCompatActivity {
     RelativeLayout location, location0, location1, location2, location3;
     TextView name0, name1, name2, name3, address0, address1, address2, address3;
-    FirebaseDatabase dataBase;
+
 
     user_class user_class;
     FirebaseUser user = user_class.mAuth.getCurrentUser();
@@ -38,7 +40,7 @@ public class Booking_sel_locale extends AppCompatActivity {
                 // Sử dụng thông tin name và address ở đây (ví dụ: hiển thị hoặc xử lý thông tin)
                 // Ví dụ:
                 Toast.makeText(getApplicationContext(), "Selected Name: " + name + ", Address: " + address, Toast.LENGTH_SHORT).show();
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                FirebaseDatabase database = com.example.salon.user_class.Database.getInstance();
 
 //                if (userID != null && userID == database.getReference().child("userID").child(userID).get().toString()) {
                     if(userID != null){
@@ -93,7 +95,6 @@ public class Booking_sel_locale extends AppCompatActivity {
             }
         });
 
-        dataBase = FirebaseDatabase.getInstance();
         name0 = findViewById(R.id.tv_locate_name_0);
         name1 = findViewById(R.id.tv_locate_name_1);
         name2 = findViewById(R.id.tv_locate_name_2);
