@@ -1,94 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.Lookbook_PageActivity"
     android:orientation="vertical">
 
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HAIRSTYLE FLASHBACK"
-        android:textStyle="bold"
-        android:layout_gravity="center"
         android:layout_alignParentTop="true"
-        android:textSize="20sp">
-    </TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="The best hairstyles of 2022 are all featured here"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp">
-    </TextView>
+        android:text="HAIRSTYLE FLASHBACK 2022"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="16dp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookbook_color_1"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="59dp" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="5dp"
-        android:layout_gravity="center_horizontal">
-
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="175dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/lookbook_img1" />
-    </androidx.cardview.widget.CardView>
     <Button
+        android:id="@+id/hair_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Short Hairs"
-        android:layout_gravity="center"
-        android:id="@+id/lookbook_btn_short">
-    </Button>
+        android:text="Hair Color"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="209dp" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookbook_short_2"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="274dp" />
 
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="5dp"
-        android:layout_gravity="center_horizontal">
-
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="175dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/lookbook_img2" />
-    </androidx.cardview.widget.CardView>
     <Button
+        android:id="@+id/short_hair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Long Hairs"
-        android:layout_gravity="center"
-        android:id="@+id/lookbook_btn_long">
-    </Button>
+        android:text="Short Hair"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="424dp" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookbook_long_4"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="492dp" />
 
-        android:layout_marginBottom="2dp"
-        app:cardCornerRadius="5dp"
-        android:layout_gravity="center_horizontal">
-
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="175dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/lookbook_img3" />
-    </androidx.cardview.widget.CardView>
     <Button
+        android:id="@+id/long_hair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Colors"
-        android:layout_gravity="center"
-        android:id="@+id/lookbook_btn_color">
-    </Button>
+        android:text="Long Hair"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="649dp" />
 </LinearLayout>

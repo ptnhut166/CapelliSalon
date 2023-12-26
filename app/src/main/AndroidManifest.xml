@@ -13,54 +13,90 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Salon"
-
-
-
         android:networkSecurityConfig="@xml/network_security_config"
         android:usesCleartextTraffic="true"
 
         tools:targetApi="31">
         <activity
-            android:name=".InfoActivity"
+            android:name=".Activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".HomeActivity"
+            android:name=".Activity.InfoActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".Activity.HomeActivity"
             android:exported="false">
         </activity>
 
+        <activity android:name=".Booking.Booking_sel_schedule"
+            android:exported="false">
+        </activity>
+        <activity android:name=".Booking.booking_sel_staff"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Booking.booking_confirm"
+            android:exported="false">
+        </activity>
         <activity
-            android:name=".BookingActivity"
+            android:name=".Booking.Booking_sel_locale"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".Activity.ForgotActivity"
             android:exported="false">
         </activity>
 
-        <activity
-            android:name=".LookbookActivity"
+
+        <activity android:name=".Activity.ListFoodsActivity"
             android:exported="false">
         </activity>
-        <activity
-            android:name=".LookbookLong"
+        <activity android:name=".Activity.NotiActivity"
             android:exported="false">
         </activity>
 
-        <activity
-            android:name=".RegisterActivity"
+        <activity android:name=".Activity.ProfileActivity"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".Helper.test"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".Activity.DetailActivity"
             android:exported="false">
         </activity>
-        <activity
-            android:name=".ForgotActivity"
-            android:exported="false">
+        <activity android:name=".Activity.CartActivity"
+            android:exported="true">
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false">
+        <activity android:name=".Activity.ShoppingActivity"
+            android:exported="true">
         </activity>
+        <activity android:name=".Activity.Lookbook_PageActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Lookbook.Lookbook_LongActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Lookbook.Lookbook_ShortActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".Lookbook.Lookbook_ColorActivity"
+            android:exported="true">
+        </activity>
+
+
+
+
     </application>
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>

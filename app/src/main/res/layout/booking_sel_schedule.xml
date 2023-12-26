@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activity.MainActivity"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -79,7 +79,8 @@
         android:layout_width="match_parent"
         android:layout_height="29dp">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/back_schedule"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_alignParentStart="true"
@@ -90,20 +91,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginEnd="385dp"
             android:layout_marginRight="385dp"
-            android:src="@drawable/icon_vectorleft"/>
+            android:src="@drawable/icon_back"/>
 
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="376dp"
-            android:layout_marginLeft="376dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginRight="9dp"
-            android:src="@drawable/icon_vectorright"/>
+
 
     </RelativeLayout>
     <ScrollView
@@ -116,11 +106,12 @@
             android:background="#4D000000"
             android:orientation="vertical">
             <RelativeLayout
+                android:id="@+id/schedule_0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/iv_capeli_locale1"
                     android:layout_width="81dp"
                     android:layout_height="81dp"
                     android:layout_alignParentStart="true"
@@ -135,6 +126,7 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_time_0"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -151,10 +143,12 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/schedule_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_time_1"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -185,10 +179,12 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/schedule_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_time_2"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -219,10 +215,12 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/schedule_3"
                 android:layout_width="match_parent"
                 android:layout_height="110dp">
 
                 <TextView
+                    android:id="@+id/tv_time_3"
                     android:layout_width="219dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -261,6 +259,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_schedule"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/menu_bottom_nav">

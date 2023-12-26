@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Booking.Booking_sel_locale">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="167dp">
 
         <ImageView
+            android:id="@+id/iv_capeli_backgroundd"
             android:layout_width="match_parent"
             android:layout_height="167dp"
             android:layout_alignParentTop="true"
@@ -22,6 +23,7 @@
         </ImageView>
 
         <ImageView
+            android:id="@+id/iv_capeli"
             android:layout_width="165dp"
             android:layout_height="122dp"
             android:layout_alignParentTop="true"
@@ -37,6 +39,7 @@
         </ImageView>
 
         <TextView
+            android:id="@+id/tv_capeli_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -52,6 +55,7 @@
             android:textStyle="bold"></TextView>
 
         <TextView
+            android:id="@+id/tv_salon"
             android:layout_width="93dp"
             android:layout_height="48dp"
             android:layout_alignParentEnd="true"
@@ -67,31 +71,35 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/tv_selectLocale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="20dp"
         android:text="->Select service location:"
         android:textAllCaps="false"
-        android:layout_marginStart="16dp"
         android:textStyle="bold"></TextView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="26dp">
-        <ImageView
+
+        <ImageButton
+            android:id="@+id/ibutton_next"
             android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="376dp"
-            android:layout_marginLeft="376dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginRight="9dp"
-            android:src="@drawable/icon_vectorright"/>
+            android:layout_marginStart="-3dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginEnd="388dp"
+            android:layout_marginRight="388dp"
+            android:src="@drawable/icon_back" />
 
     </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="434dp">
@@ -101,12 +109,14 @@
             android:layout_height="394dp"
             android:background="#4D000000"
             android:orientation="vertical">
+
             <RelativeLayout
+                android:id="@+id/location_0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/iv_capeli_locale1"
                     android:layout_width="81dp"
                     android:layout_height="81dp"
                     android:layout_alignParentStart="true"
@@ -121,6 +131,7 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <TextView
+                    android:id="@+id/tv_locate_name_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -131,9 +142,10 @@
                     android:layout_marginEnd="195dp"
                     android:layout_marginRight="195dp"
                     android:text="Name: San rose"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_locate_address_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -144,14 +156,16 @@
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
                     android:text="Address : Walnet St."
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/location_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_locate_name_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -162,9 +176,10 @@
                     android:layout_marginEnd="195dp"
                     android:layout_marginRight="195dp"
                     android:text="Name: San rose"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_locate_address_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -175,7 +190,7 @@
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
                     android:text="Address : Walnet St."
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -192,10 +207,12 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/location_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_locate_name_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -206,9 +223,10 @@
                     android:layout_marginEnd="195dp"
                     android:layout_marginRight="195dp"
                     android:text="Name: San rose"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/tv_locate_address_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -219,7 +237,7 @@
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
                     android:text="Address : Walnet St."
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imageView3"
@@ -237,14 +255,16 @@
                     android:src="@drawable/booking_img3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    app:layout_constraintStart_toStartOf="parent" />
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/location_3"
                 android:layout_width="match_parent"
                 android:layout_height="110dp">
+
                 <TextView
+                    android:id="@+id/tv_locate_name_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -255,8 +275,10 @@
                     android:layout_marginEnd="195dp"
                     android:layout_marginRight="195dp"
                     android:text="Name: San rose"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
+
                 <TextView
+                    android:id="@+id/tv_locate_address_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -267,7 +289,7 @@
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
                     android:text="Address : Walnet St."
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -285,8 +307,7 @@
                     android:src="@drawable/booking_img3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    app:layout_constraintStart_toStartOf="parent" />
             </RelativeLayout>
 
         </LinearLayout>
@@ -298,10 +319,10 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv_locate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/menu_bottom_nav">
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+            app:menu="@menu/menu_bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
     </RelativeLayout>
 
 </LinearLayout>
