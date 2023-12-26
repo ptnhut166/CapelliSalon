@@ -25,6 +25,7 @@ public class Lookbook_PageActivity extends AppCompatActivity {
         Button long_hair = findViewById(R.id.long_hair);
         Button short_hair = findViewById(R.id.short_hair);
         Button color = findViewById(R.id.hair_color);
+        ImageView backButton = findViewById(R.id.backBtn);
 
 
         View.OnClickListener listenerLongHair = new View.OnClickListener() {
@@ -54,9 +55,19 @@ public class Lookbook_PageActivity extends AppCompatActivity {
             }
         };
 
+        View.OnClickListener listenerBack = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(view.getContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        };
+
         long_hair.setOnClickListener(listenerLongHair);
         short_hair.setOnClickListener(listenerShortHair);
         color.setOnClickListener(listenerColor);
+        backButton.setOnClickListener(listenerBack);
 
 
 
