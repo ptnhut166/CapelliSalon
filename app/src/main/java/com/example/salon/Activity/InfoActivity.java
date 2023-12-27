@@ -20,7 +20,6 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.info_page);
         btn_logout=findViewById(R.id.btn_logout);
         View.OnClickListener listenerLogout = new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();

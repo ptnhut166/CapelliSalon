@@ -30,9 +30,6 @@ public class LoginActivity extends AppCompatActivity{
     TextInputEditText edt_email, edt_password;
     Button btn_login, btn_signup,btn_forgot;
 
-
-
-
     @Override
     public void onStart() {
         super.onStart();

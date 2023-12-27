@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,22 +18,19 @@ import com.google.firebase.auth.FirebaseAuth;
 public class ForgotActivity extends AppCompatActivity {
     TextInputEditText edt_email;
 
-
-    Button btn_forgot;
+    Button btn_reset;
     FirebaseAuth mAuth;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         mAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.info_page);
+        setContentView(R.layout.forgot_page);
 
-        Button btn_logout = findViewById(R.id.btn_logout);
-
-        btn_forgot.setOnClickListener(new View.OnClickListener() {
+        Button btn_reset = findViewById(R.id.btn_reset);
+        edt_email = findViewById(R.id.edt_forgot_email);
+        btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email= String.valueOf(edt_email.getText());

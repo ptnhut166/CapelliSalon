@@ -27,7 +27,7 @@
         </activity>
         <activity
             android:name=".Activity.InfoActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity
             android:name=".Activity.HomeActivity"
@@ -38,7 +38,7 @@
             android:exported="false">
         </activity>
         <activity android:name=".Booking.booking_sel_staff"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity android:name=".Booking.booking_confirm"
             android:exported="false">
@@ -69,23 +69,23 @@
 
         </activity>
         <activity android:name=".Helper.test"
-            android:exported="true">
+            android:exported="false">
 
         </activity>
         <activity android:name=".Activity.DetailActivity"
             android:exported="false">
         </activity>
         <activity android:name=".Activity.CartActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity android:name=".Activity.ShoppingActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity android:name=".Activity.LookBookActivity"
             android:exported="false">
         </activity>
         <activity android:name=".Activity.OrderActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
 
         <activity android:name=".Lookbook.Lookbook_LongActivity"
