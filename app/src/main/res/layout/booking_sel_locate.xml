@@ -140,8 +140,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="195dp"
-                    android:layout_marginRight="195dp"
+                    android:layout_marginRight="180dp"
                     android:text="Name: San rose"
                     android:textStyle="bold" />
 
@@ -154,9 +153,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="38dp"
-                    android:layout_marginEnd="166dp"
-                    android:layout_marginRight="166dp"
-                    android:text="Address : Walnet St."
+                    android:layout_marginRight="120dp"
+                    android:text="Address : 42 Maple Street"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -175,9 +173,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="195dp"
-                    android:layout_marginRight="195dp"
-                    android:text="Name: San rose"
+                    android:layout_marginRight="150dp"
+                    android:text="Name: Maria Garcia"
                     android:textStyle="bold" />
 
                 <TextView
@@ -189,9 +186,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="38dp"
-                    android:layout_marginEnd="166dp"
-                    android:layout_marginRight="166dp"
-                    android:text="Address : Walnet St."
+                    android:layout_marginRight="90dp"
+                    android:text="Address : 1080 Peachtree Ave"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -223,9 +219,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="195dp"
-                    android:layout_marginRight="195dp"
-                    android:text="Name: San rose"
+                    android:layout_marginRight="180dp"
+                    android:text="Name: Sam Lee"
                     android:textStyle="bold" />
 
                 <TextView
@@ -237,9 +232,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="38dp"
-                    android:layout_marginEnd="166dp"
-                    android:layout_marginRight="166dp"
-                    android:text="Address : Walnet St."
+                    android:layout_marginRight="90dp"
+                    android:text="Address : 500 West College St"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -276,9 +270,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="195dp"
-                    android:layout_marginRight="195dp"
-                    android:text="Name: San rose"
+                    android:layout_marginRight="140dp"
+                    android:text="Name: Isabella Smith"
                     android:textStyle="bold" />
 
                 <TextView
@@ -290,9 +283,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="38dp"
-                    android:layout_marginEnd="166dp"
-                    android:layout_marginRight="166dp"
-                    android:text="Address : Walnet St."
+                    android:layout_marginRight="80dp"
+                    android:text="Address : 255 North Harbor Blvd"
                     android:textStyle="bold" />
 
                 <ImageView

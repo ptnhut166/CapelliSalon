@@ -161,7 +161,7 @@
                     android:layout_marginTop="17dp"
                     android:layout_marginEnd="79dp"
                     android:layout_marginRight="79dp"
-                    android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
+                    android:text="Time: Wednesday, January 31, 2024, at 5:00 PM (Vietnam Time)"
                     android:textStyle="bold" />
 
 
@@ -186,6 +186,7 @@
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF">
 
+
                 <TextView
                     android:id="@+id/tv_time_2"
                     android:layout_width="219dp"
@@ -194,12 +195,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginEnd="79dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginRight="79dp"
-                    android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
+                    android:text="Time: Thursday, February 1, 2024, at 6:00 PM (Vietnam Time)"
                     android:textStyle="bold" />
-
 
                 <ImageView
                     android:id="@+id/iv_shop_product_pic2"
@@ -233,7 +232,7 @@
                     android:layout_marginTop="17dp"
                     android:layout_marginEnd="79dp"
                     android:layout_marginRight="79dp"
-                    android:text="Time: Tuesday, January 30, 2024, at 4:00 PM (Vietnam Time)"
+                    android:text="Time: Friday, February 2, 2024, at 7:00 PM (Vietnam Time)"
                     android:textStyle="bold" />
 
 

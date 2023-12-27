@@ -139,9 +139,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="160dp"
-                    android:layout_marginRight="160dp"
-                    android:text="Staff name: San rose"
+                    android:layout_marginRight="180dp"
+                    android:text="Staff name: Sarah"
                     android:textStyle="bold" />
 
                 <TextView
@@ -155,7 +154,7 @@
                     android:layout_marginTop="38dp"
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
-                    android:text="phone: 0987654321"
+                    android:text="phone: 0917654321"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -190,7 +189,7 @@
                     android:layout_marginTop="38dp"
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
-                    android:text="phone: 0987654321"
+                    android:text="phone: 0927654321"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -224,9 +223,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="160dp"
-                    android:layout_marginRight="160dp"
-                    android:text="Staff name: San rose"
+                    android:layout_marginRight="180dp"
+                    android:text="Staff name: John"
                     android:textStyle="bold" />
 
                 <TextView
@@ -240,7 +238,7 @@
                     android:layout_marginTop="38dp"
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
-                    android:text="phone: 0987654321"
+                    android:text="phone: 0937654321"
                     android:textStyle="bold" />
 
 
@@ -275,9 +273,8 @@
                     android:layout_alignParentRight="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="160dp"
-                    android:layout_marginRight="160dp"
-                    android:text="Staff name: San rose"
+                    android:layout_marginRight="180dp"
+                    android:text="Staff name: Mike"
                     android:textStyle="bold" />
 
                 <TextView
@@ -291,7 +288,7 @@
                     android:layout_marginTop="38dp"
                     android:layout_marginEnd="166dp"
                     android:layout_marginRight="166dp"
-                    android:text="phone: 0987654321"
+                    android:text="phone: 0947654321"
                     android:textStyle="bold" />
 
                 <ImageView
