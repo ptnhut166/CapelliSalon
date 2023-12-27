@@ -14,8 +14,7 @@
 <p align="center">
    APPLICATION FOR MANAGEING SALON
 </p>
-       
-</br>
+
 
 ## UML
 

@@ -1,664 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/back_shopping"
-            android:layout_width="36dp"
-            android:layout_height="38dp"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/icon_back" />
-
-        <EditText
-            android:id="@+id/editTextText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="text" />
-
-        <ImageButton
-            android:id="@+id/imgbtn_shop_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/shopping_search_icon_img3" />
-
-        <ImageButton
-            android:id="@+id/imgbtn_shop_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/shopping_icon_img2" />
-
-        <ImageButton
-            android:id="@+id/imgbtn_shop_chat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/shopping_chat_icon_img1" />
-    </LinearLayout>
+    android:background="@color/white"
+    tools:context=".Activity.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="726dp">
+        android:layout_height="match_parent">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/product_0"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic0"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product0"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product0"
-                            android:layout_width="25dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product0"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/product_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic1"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/product_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic2"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product2"
-                            android:layout_width="25dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/product_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic3"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/product_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic4"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product4"
-                            android:layout_width="25dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/product_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic5"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/product_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic6"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product6"
-                            android:layout_width="25dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/product_7"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic7"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic8"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product8"
-                            android:layout_width="25dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/iv_shop_product_pic9"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-
-                        app:srcCompat="@drawable/coconutshampoo" />
-
-                    <TextView
-                        android:id="@+id/tv_shop_product9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Product name" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_price_label9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Price:" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_price_product9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="$10" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_soldout_label_product9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Sold out: "
-                            android:textAlignment="textEnd" />
-
-                        <TextView
-                            android:id="@+id/tv_shop_value_sold_out_product9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="9+"
-                            android:textAlignment="textEnd" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/menu_bottom_nav">
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-    </RelativeLayout>
+            android:orientation="vertical">
 
-</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:background="@drawable/grey_background"
+                    android:padding="12dp"
+                    android:layout_marginEnd="6dp"
+
+                    app:srcCompat="@drawable/icon_back" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_background"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/searchEdt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey"
+                        android:ems="10"
+                        android:hint="Search Product..."
+                        android:inputType="text"
+                        android:padding="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue_grey"
+                        android:textColorHint="@color/blue_grey"
+                        android:textSize="16sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/searchBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="4dp"
+
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/icon_search" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/cartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/grey_background"
+                    android:padding="12dp"
+
+                    app:srcCompat="@drawable/icon_cart" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3333"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/grey_background"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Good Price"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="0.3333"
+                    android:background="@drawable/grey_background"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="High Quality"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.3333"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/grey_background"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="For all gender"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Our best products"
+                    android:textColor="@color/blue_grey"
+                    android:textSize="22dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBarBestProduct"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/bestProductView"
+                    app:layout_constraintStart_toStartOf="@+id/bestProductView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bestProductView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Choose Category"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/blue_grey"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBarCategory"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/categoryView"
+                    app:layout_constraintEnd_toEndOf="@+id/categoryView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/categoryView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categoryView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
