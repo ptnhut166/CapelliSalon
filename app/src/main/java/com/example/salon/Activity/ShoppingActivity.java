@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.salon.Adapter.BestFoodsAdapter;
+import com.example.salon.Adapter.BestProductsAdapter;
 import com.example.salon.Adapter.CategoryAdapter;
 import com.example.salon.Domain.Category;
 import com.example.salon.R;
@@ -24,7 +24,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.example.salon.Domain.Foods;
+import com.example.salon.Domain.Products;
 import com.example.salon.Domain.Price;
 
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class ShoppingActivity extends BaseActivity{
 
 
 
-        initBestFood();
+        initBestProduct();
         initCategory();
         setVariable();
     }
@@ -55,7 +55,7 @@ public class ShoppingActivity extends BaseActivity{
             public void onClick(View v) {
                 String text = edtText.getText().toString();
                 if (!text.isEmpty()) {
-                    Intent intent = new Intent(ShoppingActivity.this, ListFoodsActivity.class);
+                    Intent intent = new Intent(ShoppingActivity.this, ListProductsActivity.class);
                     intent.putExtra("text", text);
                     intent.putExtra("isSearch", true);
                     startActivity(intent);
@@ -67,27 +67,27 @@ public class ShoppingActivity extends BaseActivity{
         backBtn.setOnClickListener(v -> startActivity(new Intent(ShoppingActivity.this, HomeActivity.class)));
 
     }
-        private void initBestFood() {
-            RecyclerView bestFoodView = findViewById(R.id.bestFoodView);
-            ProgressBar progressBarBestFood =findViewById(R.id.progressBarBestFood);
+        private void initBestProduct() {
+            RecyclerView bestProductView = findViewById(R.id.bestProductView);
+            ProgressBar progressBarBestProduct =findViewById(R.id.progressBarBestProduct);
 
-            DatabaseReference myRef = database.getReference("Foods");
-            progressBarBestFood.setVisibility(View.VISIBLE);
-            ArrayList<Foods> list = new ArrayList<>();
-            Query query = myRef.orderByChild("BestFood").equalTo(true);
+            DatabaseReference myRef = database.getReference("Products");
+            progressBarBestProduct.setVisibility(View.VISIBLE);
+            ArrayList<Products> list = new ArrayList<>();
+            Query query = myRef.orderByChild("BestProduct").equalTo(true);
             query.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if (snapshot.exists()) {
                         for (DataSnapshot issue : snapshot.getChildren()) {
-                            list.add(issue.getValue(Foods.class));
+                            list.add(issue.getValue(Products.class));
                         }
                         if (list.size() > 0) {
-                            bestFoodView.setLayoutManager(new LinearLayoutManager(ShoppingActivity.this, LinearLayoutManager.HORIZONTAL, false));
-                            RecyclerView.Adapter adapter = new BestFoodsAdapter(list);
-                            bestFoodView.setAdapter(adapter);
+                            bestProductView.setLayoutManager(new LinearLayoutManager(ShoppingActivity.this, LinearLayoutManager.HORIZONTAL, false));
+                            RecyclerView.Adapter adapter = new BestProductsAdapter(list);
+                            bestProductView.setAdapter(adapter);
                         }
-                        progressBarBestFood.setVisibility(View.GONE);
+                        progressBarBestProduct.setVisibility(View.GONE);
                     }
                 }
 

@@ -78,7 +78,7 @@ public class HomeActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(view.getContext(), Lookbook_PageActivity.class);
+                intent.setClass(view.getContext(), LookBookActivity.class);
                 startActivity(intent);
             }
         };

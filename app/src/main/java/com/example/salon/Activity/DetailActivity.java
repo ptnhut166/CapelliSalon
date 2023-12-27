@@ -8,12 +8,12 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.bumptech.glide.Glide;
-import com.example.salon.Domain.Foods;
+import com.example.salon.Domain.Products;
 import com.example.salon.Helper.ManagmentCart;
 import com.example.salon.R;
 
 public class DetailActivity extends BaseActivity {
-    private Foods object;
+    private Products object;
     private int num = 1;
     private ManagmentCart managmentCart;
 
@@ -75,11 +75,11 @@ public class DetailActivity extends BaseActivity {
 
         addBtn.setOnClickListener(v -> {
             object.setNumberInCart(num);
-            managmentCart.insertFood(object);
+            managmentCart.insertProduct(object);
         });
     }
 
     private void getIntentExtra() {
-        object = (Foods) getIntent().getSerializableExtra("object");
+        object = (Products) getIntent().getSerializableExtra("object");
     }
 }

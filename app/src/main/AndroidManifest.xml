@@ -57,7 +57,7 @@
         </activity>
 
 
-        <activity android:name=".Activity.ListFoodsActivity"
+        <activity android:name=".Activity.ListProductsActivity"
             android:exported="false">
         </activity>
         <activity android:name=".Activity.NotiActivity"
@@ -81,20 +81,23 @@
         <activity android:name=".Activity.ShoppingActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".Activity.Lookbook_PageActivity"
+        <activity android:name=".Activity.LookBookActivity"
+            android:exported="false">
+        </activity>
+        <activity android:name=".Activity.OrderActivity"
             android:exported="true">
         </activity>
+
         <activity android:name=".Lookbook.Lookbook_LongActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
+
         <activity android:name=".Lookbook.Lookbook_ShortActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
         <activity android:name=".Lookbook.Lookbook_ColorActivity"
-            android:exported="true">
+            android:exported="false">
         </activity>
-
-
 
 
     </application>

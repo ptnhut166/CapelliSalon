@@ -3,13 +3,11 @@ package com.example.salon.Lookbook;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.salon.Activity.Lookbook_PageActivity;
+import com.example.salon.Activity.LookBookActivity;
 import com.example.salon.R;
 
 import java.util.ArrayList;
@@ -41,7 +39,7 @@ public class Lookbook_LongActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(view.getContext(), Lookbook_PageActivity.class);
+                intent.setClass(view.getContext(), LookBookActivity.class);
                 startActivity(intent);
             }
         };

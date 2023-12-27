@@ -170,17 +170,17 @@
                 android:minHeight="300dp">
 
                 <ProgressBar
-                    android:id="@+id/progressBarBestFood"
+                    android:id="@+id/progressBarBestProduct"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/bestFoodView"
-                    app:layout_constraintStart_toStartOf="@+id/bestFoodView"
+                    app:layout_constraintEnd_toEndOf="@+id/bestProductView"
+                    app:layout_constraintStart_toStartOf="@+id/bestProductView"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/bestFoodView"
+                    android:id="@+id/bestProductView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clipToPadding="false"

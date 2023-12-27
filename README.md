@@ -12,10 +12,10 @@
 
 ## Project overview
 <p align="center">
-   APPLICATION FOR MANAGING SALON
+   APPLICATION FOR MANAGEING SALON
 </p>
        
-<br/>
+</br>
 
 ## UML
 

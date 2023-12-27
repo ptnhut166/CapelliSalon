@@ -95,14 +95,9 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent();
-
-                //Gán context và tên lớp Activity cần chạy
                 intent.setClass(view.getContext(), LoginActivity.class);
 
-
-                //Gửi Intent cho hệ thống Android để kích hoạt Activity
                 startActivity(intent);
-                //Muốn Activity thứ nhất kết thúc thì thêm finish();
             }
         };
         //Gán Listener cho editbutton

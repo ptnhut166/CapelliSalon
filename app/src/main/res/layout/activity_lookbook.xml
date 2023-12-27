@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LookBookActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/grey_background"
+        android:padding="12dp"
+        android:layout_marginEnd="6dp"
+        app:srcCompat="@drawable/icon_back"
+        android:layout_gravity="left"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:text="HAIRSTYLE FLASHBACK 2022"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookbook_color_1"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <Button
+        android:id="@+id/hair_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hair Color"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookbook_short_2"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <Button
+        android:id="@+id/short_hair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Short Hair"
+        tools:layout_editor_absoluteX="143dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/lookbook_long_4"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="492dp" />
+
+    <Button
+        android:id="@+id/long_hair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Long Hair"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="649dp" />
+</LinearLayout>

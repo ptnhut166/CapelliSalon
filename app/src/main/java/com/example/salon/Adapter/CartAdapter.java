@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.example.salon.Domain.Foods;
+import com.example.salon.Domain.Products;
 import com.example.salon.Helper.ChangeNumberItemsListener;
 import com.example.salon.Helper.ManagmentCart;
 import com.example.salon.R;
@@ -21,11 +21,11 @@ import com.example.salon.R;
 import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.viewholder> {
-    ArrayList<Foods> list;
+    ArrayList<Products> list;
     private ManagmentCart managmentCart;
     ChangeNumberItemsListener changeNumberItemsListener;
 
-    public CartAdapter(ArrayList<Foods> list, Context context, ChangeNumberItemsListener changeNumberItemsListener) {
+    public CartAdapter(ArrayList<Products> list, Context context, ChangeNumberItemsListener changeNumberItemsListener) {
         this.list = list;
         managmentCart = new ManagmentCart(context);
         this.changeNumberItemsListener = changeNumberItemsListener;

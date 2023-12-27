@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.salon.Activity.Lookbook_PageActivity;
+import com.example.salon.Activity.LookBookActivity;
 import com.example.salon.R;
 
 import java.util.ArrayList;
@@ -28,7 +28,6 @@ public class Lookbook_ColorActivity extends AppCompatActivity {
         images=new ArrayList<>();
         images.add(R.drawable.lookbook_color_1);
         images.add(R.drawable.lookbook_color_2);
-        images.add(R.drawable.lookbook_color_3);
         images.add(R.drawable.lookbook_color_4);
         images.add(R.drawable.lookbook_color_5);
         pageCurlView.setCurlView(images);
@@ -40,7 +39,7 @@ public class Lookbook_ColorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(view.getContext(), Lookbook_PageActivity.class);
+                intent.setClass(view.getContext(), LookBookActivity.class);
                 startActivity(intent);
             }
         };
