@@ -53,7 +53,9 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_email"
                 android:layout_width="325dp"
@@ -61,6 +63,7 @@
                 android:ems="10"
                 android:inputType="text"
                 android:hint="Enter your email"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
 
         <TableRow
@@ -76,14 +79,19 @@
         <TableRow
             android:layout_width="310dp"
             android:layout_height="12dp">
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_password"
+                android:id="@+id/edt_password_regis1"
                 android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:hint="Enter your password"/>
+</com.google.android.material.textfield.TextInputLayout>
         </TableRow>
 
         <TableRow
@@ -99,14 +107,18 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_confirm"
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_password_confirm_regis1"
+                android:layout_width="325dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:hint="Confirm your password"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
 
     </TableLayout>
@@ -120,7 +132,7 @@
 
     </ProgressBar>
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_register_regis1"
         android:layout_width="324dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

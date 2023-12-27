@@ -35,7 +35,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="139dp"
+        android:layout_height="160dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="100dp">
 
@@ -54,13 +54,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_login_email"
-                android:layout_width="325dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:hint="Enter your email"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_input_layout_login_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_login_email"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Enter your email"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
         </TableRow>
 
         <TableRow
@@ -71,19 +78,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password:" />
+
         </TableRow>
 
         <TableRow
-            android:layout_width="310dp"
-            android:layout_height="12dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_login_password"
-                android:layout_width="325dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_input_layout_login_password"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="text"
-                android:hint="Enter your password"/>
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_login_password"
+                    android:layout_width="325dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Enter your password"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
 
     </TableLayout>

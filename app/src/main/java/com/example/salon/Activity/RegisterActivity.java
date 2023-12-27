@@ -14,7 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.salon.Activity.LoginActivity;
 import com.example.salon.Booking.user_class;
 import com.example.salon.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,8 +26,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class RegisterActivity extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword, editTextConfirm;
@@ -54,10 +51,10 @@ public class RegisterActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.change_login);
 
         editTextEmail= findViewById(R.id.edt_email);
-        editTextPassword =findViewById(R.id.edt_password);
-        editTextConfirm = findViewById(R.id.edt_confirm);
+        editTextPassword =findViewById(R.id.edt_password_confirm_regis1);
+        editTextConfirm = findViewById(R.id.edt_password_confirm_regis1);
 
-        btnSignUp=findViewById(R.id.btn_register);
+        btnSignUp=findViewById(R.id.btn_register_regis1);
         progressBar=findViewById(R.id.progressbar);
 
 
