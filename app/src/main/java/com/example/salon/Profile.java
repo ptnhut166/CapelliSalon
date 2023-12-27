@@ -112,7 +112,7 @@ public class Profile extends AppCompatActivity {
                                                            birthday.setText(String.valueOf(birthday_value));
                                                            phone.setText(String.valueOf(phone_value));
 
-//                                                           Toast.makeText(Profile.this, name_value, Toast.LENGTH_SHORT).show();
+                                                           Toast.makeText(Profile.this, "OK", Toast.LENGTH_SHORT).show();
                                                            swipe.setRefreshing(false);
                                                        }
                                                        @Override
