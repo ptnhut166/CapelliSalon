@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -35,6 +36,7 @@ public class Profile extends AppCompatActivity {
     String userid;
     String newName, newAddress, newPhone, newMail, newBirthday;
     SwipeRefreshLayout swipe;
+
 //    @Override
 //    protected void onResume() {
 //        super.onResume();
@@ -85,58 +87,96 @@ public class Profile extends AppCompatActivity {
 //    }
 
     protected void onCreate(Bundle savedInstanceState) {
+
         userid = user_class.mAuth.getUid();
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.profile);
         swipe = findViewById(R.id.swipe);
+        Button btn_reload;
+        btn_reload= findViewById(R.id.btn_reload);
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                user_class.Database.getReference().child("userID").child(userid).child("Personal Information")
-                            .addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(DataSnapshot dataSnapshot) {
-                                    // Kiểm tra xem dữ liệu có tồn tại không
-                                    if (dataSnapshot.exists()) {
-                                        // Vòng lặp qua tất cả các trường dữ liệu
-                                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                                            // Bạn có thể lấy key (tên trường) và value (giá trị) như sau:
-                                            String key = snapshot.getKey();
-                                            Object value = snapshot.getValue();
+                                       @Override
+                                       public void onRefresh() {
+                                           user_class.Database.getReference().child("userID").child(userid).child("Personal Information")
+                                                   .addValueEventListener(new ValueEventListener() {
+                                                       @Override
+                                                       public void onDataChange(DataSnapshot dataSnapshot) {
+                                                           String address_value = dataSnapshot.child("Address").getValue(String.class);
+                                                           String birthday_value = dataSnapshot.child("Birthday").getValue(String.class);
+                                                           String emai_value = dataSnapshot.child("Email").getValue(String.class);
+                                                           String name_value = dataSnapshot.child("Name").getValue(String.class);
+                                                           String phone_value = dataSnapshot.child("Phone").getValue(String.class);
+                                                           tv_profile.setText(String.valueOf(name_value));
+                                                           address.setText(String.valueOf(address_value));
+                                                           usermail.setText(String.valueOf(emai_value));
+                                                           birthday.setText(String.valueOf(birthday_value));
+                                                           phone.setText(String.valueOf(phone_value));
 
-                                            // Thực hiện các hành động tương ứng dựa trên key và value
-                                            switch (key) {
-                                                case "Name":
-                                                    tv_profile.setText(String.valueOf(value));
-                                                    break;
-                                                case "Phone":
-                                                    phone.setText(String.valueOf(value));
-                                                case "Email":
-                                                    usermail.setText(String.valueOf(value));
-                                                    break;
-                                                case "Birthday":
-                                                    birthday.setText(String.valueOf(value));
-                                                    break;
-                                                case "Address":
-                                                    address.setText(String.valueOf(value));
-                                                    break;
-                                                // Thêm các case khác nếu cần
-                                            }
-                                        }
-                                    } else {
-                                        Log.d("FirebaseData", "Personal Information is not available.");
-                                    }
-                                }
+//                                                           Toast.makeText(Profile.this, name_value, Toast.LENGTH_SHORT).show();
+                                                           swipe.setRefreshing(false);
+                                                       }
+                                                       @Override
+                                                       public void onCancelled(DatabaseError error) {
+                                                           // Xử lý khi có lỗi xảy ra
+                                                           Log.w("FirebaseError", "Failed to read value.", error.toException());
+                                                           swipe.setRefreshing(false);
+                                                       }
 
-                                @Override
-                                public void onCancelled(DatabaseError error) {
-                                    // Xử lý khi có lỗi xảy ra
-                                    Log.w("FirebaseError", "Failed to read value.", error.toException());
-                                }
-                            });
-                swipe.setRefreshing(false);
-            }
-        });
+                                                   });
+                                       }
+                                   });
+
+//        btn_reload.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                user_class.Database.getReference().child("userID").child(userid).child("Personal Information").child("Name")
+//                        .addValueEventListener(new ValueEventListener() {
+//                            @Override
+//                            public void onDataChange(DataSnapshot dataSnapshot) {
+//                                // Kiểm tra xem dữ liệu có tồn tại không
+//                                if (dataSnapshot.exists()) {
+//                                    // Vòng lặp qua tất cả các trường dữ liệu
+//                                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+//                                        // Bạn có thể lấy key (tên trường) và value (giá trị) như sau:
+//                                        String key = snapshot.getKey();
+//                                        Object value = snapshot.getValue();
+//
+//                                        // Thực hiện các hành động tương ứng dựa trên key và value
+//                                        switch (key) {
+//                                            case "Name":
+//                                                tv_profile.setText(String.valueOf(value));
+//                                                break;
+//                                            case "Phone":
+//                                                phone.setText(String.valueOf(value));
+//                                            case "Email":
+//                                                usermail.setText(String.valueOf(value));
+//                                                break;
+//                                            case "Birthday":
+//                                                birthday.setText(String.valueOf(value));
+//                                                break;
+//                                            case "Address":
+//                                                address.setText(String.valueOf(value));
+//                                                break;
+//                                            // Thêm các case khác nếu cần
+//                                        }
+//                                    }
+//                                    Toast.makeText(Profile.this, "Loading successfully!", Toast.LENGTH_SHORT).show();
+//                                } else {
+//                                    Log.d("FirebaseData", "Personal Information is not available.");
+//                                }
+//                            }
+//                            //oncancel
+//                            @Override
+//                            public void onCancelled(DatabaseError error) {
+//                                // Xử lý khi có lỗi xảy ra
+//                                Log.w("FirebaseError", "Failed to read value.", error.toException());
+//                            }
+//        });
+//
+//            }
+//        });
+
+
         ActivityResultLauncher<Intent> profileEditLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
@@ -171,7 +211,7 @@ public class Profile extends AppCompatActivity {
                 }
         );
 
-        setContentView(R.layout.profile);
+
         BottomNavigationView bottomNav = findViewById(R.id.bnv_profile); // Thay R.id.bottom_navigation bằng ID của BottomNavigationView trong layout của bạn
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -226,6 +266,11 @@ public class Profile extends AppCompatActivity {
 
         //setID
         id_profile.setText(userid);
+        tv_profile.setText(newName);
+        address.setText(newAddress);
+        phone.setText(newPhone);
+        usermail.setText(newMail);
+        birthday.setText(newBirthday);
 
         //setName
 
