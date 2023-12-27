@@ -12,7 +12,7 @@ public class user_class implements Serializable {
     private String nameStaff;
     private String phoneNumber;
     public static FirebaseAuth mAuth;
-    public static FirebaseDatabase Database;
+    public static FirebaseDatabase Database = FirebaseDatabase.getInstance();
 
     public user_class(String uid, String name, String address, String time, String nameStaff, String phoneNumber) {
         this.uid = uid;

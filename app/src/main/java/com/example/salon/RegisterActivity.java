@@ -33,7 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     Button btnSignUp, btnLogin;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    FirebaseDatabase database = user_class.Database;
     public static FirebaseUser user;
 
     public String uid;
@@ -62,7 +62,6 @@ public class RegisterActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String email, password,confirm, name;
                 email= String.valueOf(editTextEmail.getText());
                 password=String.valueOf(editTextPassword.getText());
